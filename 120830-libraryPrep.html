@@ -1,0 +1,74 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+  <meta charset="utf-8">  
+  <title>Checklist for RNA-seq library prep</title>  
+  <meta name="Daniel Brown" content="Cancer Signaling">  
+  <!-- change the stylesheet <link rel="stylesheet" href="css/styles.css?v=1.0">  -->
+  <!--[if lt IE 9]>  
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+  <![endif]-->
+</head>  
+<body>
+<h1>Checklist for RNA-seq library prep<h1>
+<h2>You will need</h2>
+<ul>
+  <li>50 - 250ng of high quality RNA </li>
+  <li><b>1x</b> RNA clean-up kit column per sample (eg Macher Nagel XS)</li>
+  <li><b>4x</b> DNA clean up column per sample (eg QIAquick)</li>
+  <li><b>255uL</b>AMpure XP beads. Bring to room temperature before use</li>
+  <li><b>Fresh</b> 80% ethanol for use with the beads</li>
+  <li>Unique index primers if you intend on multiplexing</li>
+  
+</ul>
+  <h3>Fragmentation of RNA..............................................................................................................................................................<input type='checkbox'></h3>
+  <p>Remember to use PCR tubes and preheat the PCR block to 94 degrees. When the machine is at temp, hit pause.</br>
+  Stagger the samples by a minute so fragmentation is equal.</br>
+  Clean up by column</p>
+  
+<h3>First and second strand cDNA synthesis......................................................................................................................................<input type='checkbox'></h3>
+  <p>Heat the primer mRNA mix at 65 C first to unfold secondary structure</br>
+  Add reaction buffer and RNase inhibitor incubate again</br>
+  Then perform the reverse transcription reaction</p>
+  Do second strand synthesis</br>
+  Column cleanup. This is a stopping point, after 2.5 hours you store samples at 4 C</p>
+  
+<h3>End repair cDNA..................................................................................................................................................<input type='checkbox'</h3>
+  <p>Switch to a sterile 1.5mL tube and set heat block for 20 C</br>
+   Column cleanup</p>
+   
+<h3>dA-tail library...........................................................................................................................................................<input type='checkbox'></h3>
+<p>Set the heat block to 37 C and clean up using a column</p>
+
+<h3>Adapter ligation of library....................................................................................................................................<input type='checkbox'></h3>
+<p><b>This is a critical step.</b> Perform in a PCR machine set to 25 C.</br>
+Make sure the AMpure beads have equilibrated to room temp.</br>
+Make a master mix of the adapter-reaction buffer mixture. Add the ligase separate and take out of freezer at the last minute.</br>
+Add USER enzyme after the ligation and set to 37 C</br>
+Purify by 1.8x conc AMpure beads (90uL)</p>
+
+<h3>Size selection....................................................................................................................................................<input type='checkbox'></h3>
+<b>Another critical step.</b> Start with 0.9x Ampure beads (135uL). Mix well</br>
+After incubating on the magnet <b>keep the supernatant</b></br>
+Add 0.2x beads (30uL) to the supernatant and mix well. After incubation on the magnet <b>Keep the beads</b></p>
+
+<h3>PCR enrich the library and attach indexes.................................................................................................................................<input type='checkbox'></h3>
+<p>Use a PCR tube again. Make sure the right tube has the right index added to it!</br>
+ The cycle number can be between 10 - 12 cycles depending on the input mRNA. 12 cycles is recommended for 50ng mRNA.</br>
+ Purify with a PCR cleanup column</p>
+ <h4>Assess the quality of the cDNA library before sequencing by running on a high sensitivity chip bioanalyser.</h4>
+ 
+ <h4>Some tips for when handling beads</h4>
+<ul>
+<li>When opening tube lids on the magnet, hold down the tube so liquid doesn't splash everywhere</li>
+<li>If the pellet is diffuse, especially during enzymatic clean-up give the tube a jiggle when still in the magnet</li>
+<li>Suck up supernatant slowly as to not disturb the beads</li>
+<li>For the final elution it is critical not to contaminate the PCR with beads. It is better to elute twice</li>
+<li>The volume of beads for size selection is critical. Measure the volume of DNA by pipette. It is more accurate to dial down</li>
+<li>Top up the solution to 150uL if required</li>
+</ul>
+
+ <h6 align='right'>Written by Dan Brown 31 August 2012<h6>
+
+</body>  
+</html>  

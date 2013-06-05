@@ -1,0 +1,41 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+  <meta charset="utf-8">  
+  <title>Note about survival</title>  
+  <meta name="Daniel Brown" content="Cancer Signaling">  
+  <!-- change the stylesheet <link rel="stylesheet" href="css/styles.css?v=1.0">  -->
+  <!--[if lt IE 9]>  
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+  <![endif]-->
+</head>  
+<body>
+  <h1>Aims of survival analysis</h1>
+  <p>The point is to fit a model (curve) to survival data and compare the difference between one or survival curves.</br>
+     We model the effect of one or more explanatory variables on survival like expression of a gene.</p>
+  <h2>Issues specific to survival analysis<h2>
+  <ul>
+    <li>It is always incomplete in that people are alive at the end of followup and some are just not followed up</li>
+    <li>There is something called right-hand censoring and left-truncation</li>
+    <li>Right hand censoring is when we know that the subject is alive at the end of a study (ie after a certain date)</li>
+    <li>Left hand censoring is when the subject has died but we don't know when (ie it is less than some value)</li>
+    <li>Right hand censoring is far more common</li>
+  </ul>
+  <p>The models for survival analysis incorporate these issues.</p>
+  
+  <h1>Using the survival package in R</h1>
+  <h2>The Surv function</h2>
+  <p>The package is simply called 'survival' and is part of the standard library.</br>
+     You must create a specific survival object in R using the 'Surv' function. The input is a numeric vector.</br>
+     The second argument to Surv can be a codified representation of censoring = event. 1(TRUE) for survival that is known, 0(FALSE) for right hand censoring.</br>
+     For left hand censoring ie a threshold of survival we add another vector.</p>
+  <h2>The survfit function</h2>
+    <p>This function fits a nonparametric model to the data. The data can then represented in a Kaplan-Meier plot</p>
+  <h2>The survdiff function</h2
+  <p>Performs the statistical test for differences in survival</p>
+  <h2>The Cox proportional hazards function. The coxph function</h2>
+  <p>Used when we want to estimate the coefficients of covariates (eg gene expression) in relation to survival
+   
+</body>
+<h6 align='right'>Dan Brown 2012<h6>  
+</html>  

@@ -1,0 +1,470 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+  <meta charset="utf-8">  
+  <title>Procedure for the production of exomic DNA libraries for Illumina sequencing</title>  
+  <meta name="Daniel Brown" content="Cancer Signaling">  
+  <link rel="stylesheet" type="text/css" href="plain.css" />
+  <!--[if lt IE 9]>  
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+  <![endif]-->
+</head>  
+<body>
+<h1>Procedure for the production of exomic DNA libraries for Illumina sequencing<h1>
+<h2>You will need the following consumables</h2>
+<ul>
+  <li>1ug of high quality genomic DNA per sample</li>
+  <li>NEBnext DNA library preparation kit for Illumina. Only need up to adaptor ligation</li>
+  	<ol>
+  		<li>Illumina adaptors 1 - 12 (kit A)</li>
+  	</ol>
+  <li>Qiaquick PCR clean up columns or equivalent</li>
+  <li><b>550uL</b> <i>Recommended, may change for size selection</i> AMpure XP beads. Bring to room temperature before use</li> <!--Check the amount of Ampure beads I need here-->
+  <li><b>Fresh</b> 80% ethanol for use with the beads</li>
+  <li>SeqCap EZ reagent kit. This contains human COT DNA, primers, PCR master mix and hybridisation/ wash buffers.</li>
+  <li>Dynabeads M-270 strepavidin beads for library capture</li>
+  <li>qPCR reagents for enrichment quantification</li>
+  	<ol>
+  		<li>At least 4 primer pairs for NSC control regions. Consider ordering custom regions.</li>
+  	</ol>
+  <li>PCR grade water</li>
+</ul>
+
+<h2>Exome capture sample sheet</h2>
+		 <table border="1" cellpadding="15">
+			<tr>
+				<th>Index</th>
+				<th>Sample</th>
+				<th>Index</th>
+				<th>Sample</th>
+				<th>Index</th>
+				<th>Sample</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>.................................................................</td>
+				<td>5</td>
+				<td>.................................................................</td>
+				<td>9</td>
+				<td>.................................................................</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>.................................................................</td>
+				<td>6</td>
+				<td>.................................................................</td>
+				<td>10</td>
+				<td>.................................................................</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>.................................................................</td>
+				<td>7</td>
+				<td>.................................................................</td>
+				<td>11</td>
+				<td>.................................................................</td>
+			</tr>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>.................................................................</td>
+				<td>8</td>
+				<td>.................................................................</td>
+				<td>12</td>
+				<td>.................................................................</td>
+			</tr>
+			</table>
+</br>
+  <h2>Fragmentation of gDNA. <i>(Gel-free method)</i>...................................................................................................<input type='checkbox' align='right'></h2>
+  <p>Have Illumina resuspension buffer thawed and on ice before shearing.</br>
+  	Illumina recommends to normalise the gDNA samples to a final volume of 55 μl at 20 ng/μl into each 
+  	well of the new 0.3 ml tube labeled with the DNA barcode.</p>
+  <ol>
+  	<li><b>Use a Covaris shearer with the following settings:</b></li>
+  		<ul>
+  			<li>Time: 120 seconds </li>
+  			<li>Temperature: 6 degrees</li>
+  			<li>Duty factor:</li>
+  			<li>Peak incident power:</li>
+  			<li>Cycles per burst:</li>
+  			<li>Duration:</li>
+  		</ul>
+  	<li>Seal the Covaris tubes and centrifuge to 600 xg for 1 minute. Transfer 50 μl of fragmented DNA from each Covaris tube</li>
+  	</ol>
+
+<h2>End repair sheared DNA..................................................................................................................................<input type='checkbox'></h2>
+	<ol>
+		<li>Pre-heat the thermal cycler to 30°C. Pre-heat the lid to 100°C.</li>
+		<li>Add 12.5 μl of A-Tailing Mix to each reaction. Gently pipette the entire volume up and down 10 times to mix thoroughly.</li>
+		<li>Incubate at 37°C for 30 minutes.</li>
+		<li>Proceed immediately to Ligate Adapters. <i>Illumina has no post-reaction clean-up</i>.</li>
+	</ol>
+	
+<h2>Poly adenylate 3' ends.....................................................................................................................................<input type='checkbox'></h2>
+	<ol>
+		<li>Pre-heat the thermal cycler to 37°C. Pre-heat the lid to 100°C.</li>
+		<li>Add 40uL of the end repair mix.</li>
+		<li>Incubate at 30°C for 30 minutes.</li>
+		<li>Clean up using Qiaquick columns <i>The Illumina protocol has only a bead clean-up</i></li>
+	</ol>
+	
+<h2>Ligate adaptors................................................................................................................................................<input type='checkbox'></h2>
+	<p>Get the ligation mix ready. Cleanup and size select using AmpureXP beads. Have these at room temp for 30 min prior to use</p>
+	<ol>
+		<li>Pre-heat the thermal cycler to 30°C. Pre-heat the lid to 100°C.</li>
+		<li>Add 2.5 μl of Ligation Mix.</li>
+		<li>Incubate at 30°C for <i>10 minutes</i>.</li>
+		<li>Add 5 μl of Stop Ligation Buffer to each reaction. Gently pipette the entire volume up and down 10 times to mix thoroughly.</li>
+		<li>Clean up the reaction using AmPureXP beads:</li>
+		<ul>
+			<li>Add the following quantity of beads <b>42.5uL</b>.</li>
+			<li>Put on DynaMag until the solution clears.</li>
+			<li>Wash 2 times with 200uL 80% ethanol.</li>
+			<li>Resuspend in the <i>appropriate buffer</i> to start NimbleGen protocol.</li>
+		</ul>
+	</ol>
+	<p>The library portion of the protocol is complete at this point. Continue to QC or the NimbleGen kit.</p>
+	
+<h2>QC the pre-amplified libraries...........................................................................................................................<input type='checkbox'></h2>
+    <p>This step is optional to make sure the library prep worked. In order of workflow and information extracted.</p>
+    <ul>
+    	<li>Qubit</li>
+    	<li>Bioanalyser DNA chip</li>
+    	<li>qPCR of NS loci</li>
+    </ul>
+     
+<h2>Amplifying the Sample Library Using LM-PCR.................................................................................................<input type='checkbox'></h2>
+	<p>This step uses custom primers form the SeqCap EZ reagent kit. Inclusion of a negative control <i>(water)</i> and positive control <i>(previously amplified library)</i> is highly recommended.</p>
+	<ol>
+		<li>Set up the PCR reaction</li>
+		 <table border="1" align='center'">
+			<tr>
+			<th>Pre-Capture LM-PCR Master Mix</th>
+			<th>Per sample library volume</th>
+			<th>Per 12 sample master mix +10%</th>
+			</tr>
+			<tr>
+			<td>Roche High-Fidelity PCR Master Mix (2x)</td>
+			<td>50uL</td>
+			<td>660uL</td>
+			</tr>
+			<tr>
+			<td>PCR grade water</td>
+			<td>25uL</td>
+			<td>330uL</td>
+			</tr>
+			<tr>
+			<td>TS-PCR Oligo 1 & 2, 6 μM (Final Conc:0.375 nM) </td>
+			<td>80uL</td>
+			<td>66uL</td>
+			</tr>
+			</tr>
+			<tr>
+			<td>Total</td>
+			<td>5uL</td>
+			<td>1065uL</td>
+			</tr>
+		</table> 
+		<li>Pipette 80 μl of LM-PCR Master Mix into each PCR tube or well.</li>
+		<li>Add the 20 μl of sample library to the PCR tube containing the LM-PCR Master Mix. Mix well by pipetting up and down five times. Do not vortex.</li>
+		<li>Amplify the sample library using the following Pre-Capture LM-PCR program:</li>
+		<ul>
+			<li>Step 1: 2 minutes @ 94°C</li>
+			<li>Step 2: 10 seconds @ 94°C</li>
+			<li>Step 3: 70 seconds @ 60°C</li>
+			<li>Step 4: 45 seconds @ 72°C</li>
+			<li>Step 5: Go to Step 2, repeat seven times</li>
+			<li>Step 6: 7 minutes @ 72°C</li>
+			<li>Step 7: Hold @ 4°C</li>
+		</ul>
+		<li>Clean up the Amplified Sample Library using Qiaquick column</li>
+		<li>Check the Quality of the Amplified Sample Library by nanodrop <b>AND</b> Qubit.</li>
+		<ul>
+			<li>When working with samples that will be pooled for hybridization, accurate quantitation is <b>essential</b></li>
+			<li>The sample library yield should be > 1.0 μg.</li>
+			<li>Run 1 μl of each amplified sample library (and any negative controls) on an Agilent DNA 1000 chip. The Bioanalyzer should indicate that most of the fragments fall between 150 - 400 bp</li>
+		</uL>
+	</ol>
+
+<h2>Hybridizing the Sample DNA and SeqCap EZ Libraries..................................................................................<input type='checkbox'></h2>
+	<p>The hybridization protocol requires a thermocycler capable of maintaining 47°C for 72 hours. A programmable heated lid is strongly recommended.</p>
+	<h3>Preparing the SeqCap EZ library and Hybridization Enhancing Oligo Pool<input type='checkbox'></h3>
+	<ol>
+		<li>Turn on a heat block to +95°C and let it equilibrate to the set temperature.</li>
+		<li>Remove the appropriate number of 4.5 μl SeqCap EZ Library aliquots (one per sample library) from the freezer and allow them to thaw on ice.</li>
+		<li>Mix together equal amounts (by mass) of each of these amplified DNA sample libraries to obtain a single pool with a combined mass of at least 1.1 μg. </br>
+		One μg of the multiplex DNA sample library pool will be used in the sequence capture hybridization step, and 60 ng will be used for Measurement of Enrichment Using qPCR.</br>
+		<b>This pooling step of individual libraries is a critical step in obtaining equal number of sequencing reads.</b></li>
+		<li>Prepare the Multiplex Hybridization Enhancing Oligo Pool</li>
+		<ul>
+			<li>Thaw on ice the resuspended TS-HE Universal Oligo 1 (1,000 μM) and each resuspended TS-INV-HE Index oligo (1,000 μM) that matches a DNA Adapter Index included in the Multiplex DNA Sample Library Pool.</li>
+			<li>Mix together the HE oligos so that the resulting Multiplex Hybridization Enhancing Oligo Pool contains, by mass, 50% TS-HE Universal Oligo 1 and 50% of a mixture of the appropriate TS-INV-HE Index oligos. 
+			The total combined mass of the Multiplex Hybridization Enhancing Oligo Pool should be 2,000 pmol.</li>
+			<li>Due to the difficulty of accurately pipetting small volumes, it is recommended to either prepare a larger volume of the Multiplex Hybridization Enhancing Oligo Pool using the 1,000 μM stocks or dilute the 1,000 μM stocks and then pool.</li>
+		</ul>
+	</ol>
+	
+	<h3>Dehydrate the Hybridization Sample<input type='checkbox'></h3>	
+	
+	<ol>
+			<li>Add 5μl of COT Human DNA( 1mg/ml) to a <b>new 1.5ml</b> tube</li>
+			<li>Add 1 μg of Multiplex DNA Sample Library to the 1.5 ml tube containing 5 μl of COT Human DNA.</li>
+			<li>Add 2,000 pmol of Multiplex Hybridization Enhancing Oligo Pool to the Multiplex DNA Sample Library Pool plus COT Human DNA.</li>
+			<li>Close the tube’s lid and make a hole in the top of the tube’s cap with an 18 - 20 gauge or smaller needle.</li>
+			<li>Dry the Multiplex DNA Sample Library Pool/COT Human DNA/Multiplex Hybridization Enhancing Oligo Pool in a DNA vacuum concentrator on high heat (60°C)</li>
+			<li>To each dried-down Multiplex DNA Sample Library Pool/COT Human DNA/Multiplex Hybridization Enhancing Oligo Pool, add: 
+			<ul>
+				<li>7.5 μl of 2X Hybridization Buffer <b>(vial 5)</b></li>
+				<li> 3 μl of Hybridization Component A <b>(vial 6)</b></li>
+			</ul>
+			<li>You should now have the following hybridisation mix in a 1.5mL tube
+			<table border="1" align='center' cellpadding="3">
+				<tr>
+				<th>Rehydration mix</th>
+				<th>Per capture volume</th>
+				</tr>
+				<tr>
+				<td>COT human DNA</td>
+				<td>5ug</td>
+				</tr>
+				<tr>
+				<td>Multiplex DNA Sample Library Pool</td>
+				<td>1ug</td>
+				</tr>
+				<tr>
+				<td>Multiplex Hybridization Enhancing Oligo Pool</td>
+				<td>2,000 pmol</td>
+				</tr>
+				<tr>
+				<td>2X Hybridization Buffer (vial 5)</td>
+				<td>7.5uL</td>
+				</tr>
+				<tr>
+				<td>Hybridisation Component A (vial 6)</td>
+				<td>3uL</td>
+				</tr>
+				<tr>
+				<td>Total</td>
+				<td>10.5uL</td>
+				</tr>
+				</tr>
+		</table></li>
+	</ol>
+	
+	<h3>Hybridising the SeqCap EZ library with the amplified, multiplexed DNA<input type='checkbox'></h3>
+	
+	<ol>	
+		<li>Cover the hole in the tube’s cap with a sticker or small piece of laboratory tape.</li>
+		<li>Vortex the hybridisation mixture for 10 seconds and centrifuge at maximum speed for 10 seconds.</li>
+		<li>Place the hybridisation mixture in a <b>95°C</b> heat block for 10 minutes to denature the DNA.</li>
+		<li>Centrifuge the hybridisation mixture at maximum speed for 10 seconds at room temperature.</li>
+		<li>Transfer the hybridisation mixture to the 4.5 μl aliquot of EZ Library in a <b>0.2 ml PCR tube</b>.</li>
+		<li>Vortex for 3 seconds and centrifuge at maximum speed for 10 seconds.</li>
+		<li>Incubate in a thermocycler at <b>47°C for 64 - 72 hours</b>. The thermocycler’s heated lid should be turned on and set to maintain <b>57°C</b>.</li>
+	</ol>
+
+<h2>Washing and Recovering Captured Multiplexed DNA Sample........................................................................<input type='checkbox'></h2>
+	<p>It is extremely important that the water bath temperature be closely monitored and remains at 47°C. Roche NimbleGen recommends that you place an external, calibrated thermometer in the water bath.</br>
+Equilibrate buffers at <b>47°C for at least 2 hours</b> before washing the captured Multiplex DNA sample. Allow the Streptavidin Dynabeads to warm to room temperature for 30 minutes prior to
+use. </br>It is helpful to have a vortex mixer located close to the thermocycler for these steps.</p>
+
+	<h3>Preparing Dynabeads<input type='checkbox'></h3>
+	
+	<ol>
+		<li>Dilute 10X Wash Buffers (I, II, III and Stringent) and 2.5X Bead Wash Buffer to create 1X working solutions.</br>
+		The follow table outlines preparation for <b>2 captures</b></li>
+		<table border="1" align='center' cellpadding="2">
+				<tr>
+				<th>Amount of Concentrated Buffer</th>
+				<th>Amount of PCR Grade Water</th>
+				<th>Total Volume of 1X Buffer</th>
+				</tr>
+				<tr>
+				<td>80 μl – 10X Stringent Wash Buffer (vial 4)</td>
+				<td>720uL</td>
+				<td>800uL</td>
+				</tr>
+				<tr>
+				<td>60 μl – 10X Wash Buffer I (vial 1)</td>
+				<td>540uL</td>
+				<td>600uL</td>
+				</tr>
+				<tr>
+				<td>40 μl – 10X Wash Buffer II (vial 2)</td>
+				<td>360uL</td>
+				<td>400uL</td>
+				</tr>
+				<tr>
+				<td>40 μl – 10X Wash Buffer III (vial 3)</td>
+				<td>360uL</td>
+				<td>400uL</td>
+				</tr>
+				<tr>
+				<td>400 μl – 2.5X Bead Wash Buffer (vial 7)</td>
+				<td>600uL</td>
+				<td>1000uL</td>
+				</tr>
+		</table>
+		<li>Preheat <b>1X Stringent Wash Buffer and 1X Wash Buffer I to +47°C</b> in a water bath</li>
+		<li>Mix the Dynabeads  thoroughly by vortexing for 15 seconds.</li>
+		<li>Aliquot 100 μl of beads for each capture into a single 1.5 ml tube (i.e. for 2 captures use 200 μl beads). Enough beads for six captures can be prepared in a single tube.</li>
+		<li>Place the tube in a DynaMag-2 device. When the liquid becomes clear (should take less than 5 minutes), remove and discard the liquid being careful to leave all of the beads in the tube.</li>
+		<li>While the tube is in the DynaMag-2 device, add twice the initial volume of beads of 1X Bead Wash Buffer (i.e. for 2 captures use 400 μl of buffer).</li>
+		<li>Remove the tube from the DynaMag-2 device and vortex for 10 seconds.</li>
+		<li>Place the tube back in the DynaMag-2 device to bind the beads. Once clear, remove and discard the liquid.</li>
+		<li>Repeat Steps 6 - 8 for a total of two washes.<input type='checkbox'></li>
+		<p>After Step 9, proceed to DNA binding as quickly as possible. Do not allow the Streptavidin Dynabeads to dry out. Small amounts of residual Bead Wash Buffer will not interfere with binding of DNA to the Streptavidin Dynabeads.</p>
+		</ol>
+		<h3>Capturing DNA<input type='checkbox'></h3>
+		<ol>
+		<li>Transfer each hybridization sample to <b>100uL</b> of the Streptavidin Dynabeads prepared in 9.</li>
+		<li>Mix thoroughly by pipetting up and down ten times.</li>
+		<li>Bind the captured sample to the beads by placing the tubes containing the beads and DNA in a <b>thermocycler set to 47°C for 45 minutes</b> (heated lid set to +57°C). 
+		</br>Mix the samples by vortexing for 3 seconds at 15 minute intervals to ensure that the beads remain in suspension.</li>
+		<li>After the 45-minute incubation, add 100 μl of 1X Wash Buffer I heated to 47°C to the 15 μl of Streptavidin Dynabeads Plus Bound DNA.</li>
+		<li>Mix by vortexing for 10 seconds and transfer the entire content of each 0.2 ml tube to a <b>1.5 ml tube</b>.</li>
+		<li>Place the tubes in the DynaMag-2 device to bind the beads. Remove and discard the liquid once clear.</li>
+		<li>Remove the tubes from the DynaMag-2 device and add 200 μl of 1X Stringent Wash Buffer heated to 47°C. Pipette up and down ten times to mix. </br>Work quickly so that the temperature does not drop much below 47°C.</li>
+		<li>Incubate at 47°C for 5 minutes.</li>
+		<li>Repeat Steps 15 - 17 for a total of two washes using 1X Stringent Wash Buffer heated to 47°C.<input type='checkbox'></li>
+		<li>Add 200 μl of <b>room temperature 1X Wash Buffer I</b> and mix by vortexing for 2 minutes. 
+		</br>If liquid has collected in the tube’s cap, tap the tube gently to collect the liquid into the tube’s bottom before continuing to the next step.</li>
+		<li>Place the tubes in the DynaMag-2 device to bind the beads. Remove and discard the liquid once clear.</li>
+		<li>Add 200 μl of room temperature 1X Wash Buffer <b>II</b> and mix by vortexing for 1 minute.</li>
+		<li>Place the tubes in the DynaMag-2 device to bind the beads. Remove and discard the liquid once clear.</li>
+		<li>Add 200 μl of room temperature 1X Wash Buffer <b>III</b> and mix by vortexing for 30 seconds.</li>
+		<li>Place the tubes in the DynaMag-2 device to bind the beads. Remove and discard the liquid once clear.</li>
+		<li>Remove the tubes from the DynaMag-2 device and add 50 μl PCR grade water to each tube of bead-bound captured sample.</li>
+		<li>Store the beads plus captured samples at -15 to -25°C</li>
+	</ol>
+
+<h2>Amplifying Captured Multiplex DNA Sample Using LM-PCR.............................................................................<input type='checkbox'></h2>
+	<p>Amplification of captured Multiplex DNA sample, bound to the Streptavidin Dynabeads 
+	using LM-PCR. A total of two reactions are performed per sample and subsequently combined, 
+	to minimize PCR bias.</br>Prepare on ice.</p>
+	<ol>
+		<li>Prepare the Post-Capture LM-PCR Master Mix in a 1.5 ml tube. Include 10% for pipetting error.
+		<table border="1" align='center' cellpadding="5"">
+			<tr>
+			<th>Post-Capture LM-PCR Master Mix</th>
+			<th>Two reactions (per 1 sample)</th>
+			<th>x....... samples</th>
+			</tr>
+			<tr>
+			<td>Roche High-Fidelity PCR Master Mix (2x)</td>
+			<td>110uL</td>
+			<td>..........................</td>
+			</tr>
+			<tr>
+			<td>TS-PCR Oligo 1 & 2, 6 μM (Final Conc.: 0.375 nM)</td>
+			<td>11uL</td>
+			<td>..........................</td>
+			</tr>
+			<tr>
+			<td>PCR grade water</td>
+			<td>55uL</td>
+			<td>..........................</td>
+			</tr>
+			</tr>
+			<tr>
+			<td>Total</td>
+			<td>176uL</td>
+			<td>..........................</td>
+			</tr>
+		</table></li>
+		<p><b>Remember</b> two LM-PCR reactions will be performed for each captured multiplex DNA sample.</p>
+		<li>Pipette 80 μl of Post-Capture LM-PCR Master Mix into the reaction tubes or wells.</li>
+		<li>Vortex the bead-bound captured DNA to ensure a homogenous mixture of beads.</li>
+		<li>Aliquot 20 μl of bead-bound captured DNA as template into each of the two PCR tubes/wells. Add 20 μl of PCR grade water to the negative control. Mix well by pipetting up and down five times</li>
+		<li>Amplify the captured DNA using the following Post-Capture LM-PCR program:</li>
+		<ul>
+			<li>Step 1: 2 minutes @ 94°C</li>
+			<li>Step 2: 10 seconds @ 94°C</li>
+			<li>Step 3: 70 seconds @ 60°C</li>
+			<li>Step 4: 45 seconds @ 72°C</li>
+			<li>Step 5: Go to Step 2, repeat <b>17</b> times</li>
+			<li>Step 6: 7 minutes @ 72°C</li>
+			<li>Step 7: Hold @ 4°C</li>
+		</ul>
+	<li>Store reactions at +2 to +8°C until ready for purification, up to 72 hours.</li>
+	<li>Clean up the PCR reaction using a Qiaquick column.</li>
+	<li>Analyze 1 μl of the amplified captured multiplex DNA and negative control using an Agilent DNA 1000 chip. 
+	</br>The yield should be 500 ng with a fragment size of 150 - 400bp.</li>
+	</ol>
+	<p>If the results of the qPCR assays (next step) indicate the enrichment was successful, the amplified captured multiplex DNA is ready for sequencing.</p>
+	
+	
+
+<h2>Measuring Enrichment Using qPCR..................................................................................................................<input type='checkbox'></h2>
+<p><i>Highly recommended</i>. This qPCR assay is used to estimate relative fold enrichment of the captured, multiplexed amplified sample 
+	comapred to the amplified pre-capture sample.</p>
+	<ol>
+		<li>Determine the number of DNA samples to be analyzed.</li>
+		<ul>
+			<li>Each DNA sample is a captured - pre-capture pair</li>
+			<li>Include a negative control <i>(water)</i> and positive control <i>(original gDNA)</i></li>
+		</ul>
+		<li>The number of reaction wells required to perform a complete control locus qPCR analysis is determined by the formula, W = 24 x (S + 1), 
+		where W is the total number of wells required and S is the number of captured DNA samples in the experiment.</li>
+		<li>Dilute the NSC assay forward and reverse primers to 2 μM.</li>
+		<li>Dilute sufficient amounts of amplified sample library and amplified captured multiplex DNA to a concentration of 5 ng/μl in 
+		PCR grade water for use as qPCR templates (approximately 100 μl each).</li>
+		<li>Set up the following PCR reaction:
+		<table border="1" align='center' cellpadding="5"">
+			<tr>
+			<th>qPCR master mix</th>
+			<th>x1 well</th>
+			<th>x....... wells</th>
+			</tr>
+			<tr>
+			<td>SYBR Green Master (2X)</td>
+			<td>7.5uL</td>
+			<td>..........................</td>
+			</tr>
+			<tr>
+			<td>NSC Assay forward primer (2 μM)</td>
+			<td>0.3uL</td>
+			<td>..........................</td>
+			</tr>
+			<tr>
+			<td>NSC Assay reverse primer (2 μM)</td>
+			<td>0.3uL</td>
+			<td>..........................</td>
+			</tr>
+			<tr>
+			<td>PCR grade water</td>
+			<td>5.9uL</td>
+			<td>..........................</td>
+			</tr>
+			</tr>
+			<tr>
+			<td>5 ng/μl template (0.33ng/uL final)</td>
+			<td>1uL</td>
+			<td>..........................</td>
+			</tr>
+			</tr>
+			<tr>
+			<td>Total</td>
+			<td>15uL</td>
+			<td>..........................</td>
+			</tr>
+		</table></li>
+		<li>Use a lightcycler 480 <i>Southey lab</i> set for the following parameters:</li>
+		<ol> 
+			<li>Step 1: 10 seconds @ 95°C. Ramp rate 4.8</li>
+			<li>Step 2: 10 seconds @ 95°C. Ramp rate 4.8</li>
+			<li>Step 3: 60 seconds @ 60°C. Ramp rate 2.5. Acquire single</li>
+			<li>Step 4: Go to Step 2, repeat 40 times</li>
+			<li>Melt curve: 10 seconds @ 95°C. Ramp rate 4.8</li>
+			<li>Melt curve: 1 minute @ 65°C. Ramp rate 2.5</li>
+			<li>Melt curve: @ 95°C. 5 continuous acquisitions per °C</li>
+			<li>Target: 10 seconds @ 40°C. Ramp rate 2.</li>
+		</ol>
+	</ol>
+	
+<p>Hopefully the library is now able to be sequenced on a Illumina HiSeq or equivalent</p>
+  
+ <h6 align='right'>Written by Dan Brown 08 May 2013<h6>
+
+</body>  
+</html>  

@@ -1,0 +1,60 @@
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+Dan Brown changed a few things May 2013
+*/
+
+body {
+	margin: 2;
+	padding: 2;
+	font-family:Helvetica;
+	font-size: 15px;
+}
+
+h1, h2, h3 {
+	margin: 1;
+	padding: 3;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 2.4em;
+	text-align: center;
+}
+
+h2 {
+	font-size: 2em;
+	text-align: left;
+}
+
+h3 {
+	font-size: 1.65em;
+	text-align: center;
+}
+
+h6 {
+	color: #484848;
+	text-align: right;
+}
+
+b {
+	font-size: 1.05em;
+}
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 180%;
+}
+
+ul, ol {
+}
+
+a {
+	text-decoration: none;
+	color: #FF7200;
+}
+
+a:hover {
+}
