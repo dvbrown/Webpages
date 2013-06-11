@@ -79,7 +79,7 @@
 <h2>End repair sheared DNA..................................................................................................................................<input type='checkbox'></h2>
   <p>Starting material 1ug of sheared gDNA.</p>
   <ol>
-    <li>Prepare the following reagents <i>Green lids</i>:</br>
+    <li>Prepare the following reagents <i style="color:green;">Green lids</i>:</br>
     <table border="1" cellpadding="10">
 			<tr>
 				<th>Component</th>
@@ -111,31 +111,57 @@
 	</ul>
 	<li>Proceed immediately to Ligate Adapters. <i>NEBnext ultra has no post-reaction clean-up</i>.</li>
   </ol>
-	
-<h2>Poly adenylate 3' ends.....................................................................................................................................<input type='checkbox'></h2>
-	<ol>
-		<li>Pre-heat the thermal cycler to 37°C. Pre-heat the lid to 100°C.</li>
-		<li>Add 40uL of the end repair mix.</li>
-		<li>Incubate at 30°C for 30 minutes.</li>
-		<li>Clean up using Qiaquick columns <i>The Illumina protocol has only a bead clean-up</i></li>
-	</ol>
-	
+		
 <h2>Ligate adaptors................................................................................................................................................<input type='checkbox'></h2>
-	<p>Get the ligation mix ready. Cleanup and size select using AmpureXP beads. Have these at room temp for 30 min prior to use</p>
+	<p>Cleanup and size select using AmpureXP beads. Have these at room temp for 30 min prior to use</p>
 	<ol>
-		<li>Pre-heat the thermal cycler to 30°C. Pre-heat the lid to 100°C.</li>
-		<li>Add 2.5 μl of Ligation Mix.</li>
-		<li>Incubate at 30°C for <i>10 minutes</i>.</li>
-		<li>Add 5 μl of Stop Ligation Buffer to each reaction. Gently pipette the entire volume up and down 10 times to mix thoroughly.</li>
-		<li>Clean up the reaction using AmPureXP beads:</li>
-		<ul>
-			<li>Add the following quantity of beads <b>42.5uL</b>.</li>
-			<li>Put on DynaMag until the solution clears.</li>
-			<li>Wash 2 times with 200uL 80% ethanol.</li>
-			<li>Resuspend in the <i>appropriate buffer</i> to start NimbleGen protocol.</li>
-		</ul>
+		<li>Prepare the following reagents <i style="color:red;">Red lids</i></br>
+    <table border="1" cellpadding="10">
+			<tr>
+				<th>Component</th>
+				<th>Volume (uL)</th>
+			</tr>
+			<tr>
+				<td>End Prep reaction mixture</td>
+				<td>65.0</td>
+			</tr>
+			<tr>
+				<td>Blunt/TA Ligase Master Mix</td>
+				<td>15.0</td>
+			</tr>
+			<tr>
+				<td>NEBNext Adapter for Illumina</td>
+				<td>2.5uL</td>
+			</tr>
+			<tr>
+				<td>Ligation Enhancer</td>
+				<td>1.0uL</td>
+			</tr>
+			<tr>
+				<td>Total volume</td>
+				<td>83.5</td>
+			</tr>
+	</table></br>
+		<li>Incubate at 20°C for <i>15 minutes</i> in a thermal cycler.</li>
+		<li>Add 3μl of USER enzyme to each reaction. Mix thoroughly.</li>
+		<li>Incubate at 37°C for <i>15 minutes</i> in a thermal cycler.</li>
 	</ol>
-	<p>The library portion of the protocol is complete at this point. Continue to QC or the NimbleGen kit.</p>
+	
+<h2>Size selection...............................................................................................................................................<input type='checkbox'></h2>
+	<p>The following size selection protocol is for libraries with 200 bp inserts only.</p>
+	<ol>
+			<li>To the ligation reaction (83.5 μl), add 16.5 μl nuclease-free water to bring the reaction volume to 100 μl.</li>
+			<li>Add 60 μl (0.6X) resuspended AMPure XP beads and mix well on a vortex mixer or by pipetting up and down at least 10 times.</li>
+			<li>Incubate at room temperature for 5 minutes.</li>
+			<li>Place the tube on an appropriate magnetic rack to separate beads from the supernatant. 
+			After the solution is clear (about 5 minutes), carefully transfer the supernatant containing your DNA 
+			to a new tube <b>(Caution: do not discard the supernatant)</b>.</li>
+			<li>Add 25 μl (0.25X) resuspended AMPure XP beads to the supernatant (160 μl), mix well and incubate for 5 minutes at room temperature.</li>
+			<li>Wash 2 times with 200uL 80% ethanol.</li>
+			<li>Air dry beads for 10 minutes while the tube is on the magnetic rack with the lid open.</li>
+			<li>Elute DNA target from the beads with 25 μl nuclease-free water. Mix well on a vortex mixer or by pipetting up and down, then put the tube in the magnetic rack until the solution is clear.</li>
+			<li>Without disturbing the bead pellet, transfer 20 μl of the supernatant to a clean PCR tube, and proceed to PCR enrichment. Contamination of beads will inhibit downstream PCR.</li>
+		</ol>
 	
 <h2>QC the pre-amplified libraries...........................................................................................................................<input type='checkbox'></h2>
     <p>This step is optional to make sure the library prep worked. In order of workflow and information extracted.</p>
@@ -144,7 +170,7 @@
     	<li>Bioanalyser DNA chip</li>
     	<li>qPCR of NS loci</li>
   	
-<p>Proceed to the first step of library preparation <a href="130611_endRepairLigation.html">The End repair and Adapter Ligation protocol</a> </p>
+<p>Proceed to the first step of library preparation <a href="130611_nebPCRqcCheck.html">The End repair and Adapter Ligation protocol</a> </p>
   	
  <h6 align='right'>Written by Dan Brown 08 May 2013<h6>
 
