@@ -1,0 +1,124 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+  <meta charset="utf-8">  
+  <title>Procedure for the production of exomic DNA libraries for Illumina sequencing</title>  
+  <meta name="Daniel Brown" content="Cancer Signaling">  
+  <link rel="stylesheet" type="text/css" href="plain.css" />
+  <!--[if lt IE 9]>  
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+  <![endif]-->
+</head>  
+<body>
+<h1>Procedure for the production of exomic DNA libraries for Illumina sequencing<h1>
+<h2>You will need the following consumables</h2>
+<ul>
+  <li>1ug of high quality genomic DNA per sample</li>
+  <li>NEBnext DNA library preparation kit for Illumina. Only need up to adaptor ligation</li>
+  	<ol>
+  		<li>Illumina adaptors 1 - 12 (kit A)</li>
+  	</ol>
+  <li>Qiaquick PCR clean up columns or equivalent</li>
+  <li><b>550uL</b> <i>Recommended, may change for size selection</i> AMpure XP beads. Bring to room temperature before use</li> <!--Check the amount of Ampure beads I need here-->
+  <li><b>Fresh</b> 80% ethanol for use with the beads</li>
+  <li>SeqCap EZ reagent kit. This contains human COT DNA, primers, PCR master mix and hybridisation/ wash buffers.</li>
+  <li>Dynabeads M-270 strepavidin beads for library capture</li>
+  <li>qPCR reagents for enrichment quantification</li>
+  	<ol>
+  		<li>At least 4 primer pairs for NSC control regions. Consider ordering custom regions.</li>
+  	</ol>
+  <li>PCR grade water</li>
+</ul>
+
+<h2>Exome capture sample sheet</h2>
+		 <table border="1" cellpadding="15">
+			<tr>
+				<th>Index</th>
+				<th>Sample</th>
+				<th>Index</th>
+				<th>Sample</th>
+				<th>Index</th>
+				<th>Sample</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>.................................................................</td>
+				<td>5</td>
+				<td>.................................................................</td>
+				<td>9</td>
+				<td>.................................................................</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>.................................................................</td>
+				<td>6</td>
+				<td>.................................................................</td>
+				<td>10</td>
+				<td>.................................................................</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>.................................................................</td>
+				<td>7</td>
+				<td>.................................................................</td>
+				<td>11</td>
+				<td>.................................................................</td>
+			</tr>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>.................................................................</td>
+				<td>8</td>
+				<td>.................................................................</td>
+				<td>12</td>
+				<td>.................................................................</td>
+			</tr>
+			</table>
+</br>
+
+<h2>End repair sheared DNA..................................................................................................................................<input type='checkbox'></h2>
+  <ol>
+	<li>Pre-heat the thermal cycler to 30°C. Pre-heat the lid to 100°C.</li>
+	<li>Add 12.5 μl of A-Tailing Mix to each reaction. Gently pipette the entire volume up and down 10 times to mix thoroughly.</li>
+	<li>Incubate at 37°C for 30 minutes.</li>
+	<li>Proceed immediately to Ligate Adapters. <i>Illumina has no post-reaction clean-up</i>.</li>
+  </ol>
+	
+<h2>Poly adenylate 3' ends.....................................................................................................................................<input type='checkbox'></h2>
+	<ol>
+		<li>Pre-heat the thermal cycler to 37°C. Pre-heat the lid to 100°C.</li>
+		<li>Add 40uL of the end repair mix.</li>
+		<li>Incubate at 30°C for 30 minutes.</li>
+		<li>Clean up using Qiaquick columns <i>The Illumina protocol has only a bead clean-up</i></li>
+	</ol>
+	
+<h2>Ligate adaptors................................................................................................................................................<input type='checkbox'></h2>
+	<p>Get the ligation mix ready. Cleanup and size select using AmpureXP beads. Have these at room temp for 30 min prior to use</p>
+	<ol>
+		<li>Pre-heat the thermal cycler to 30°C. Pre-heat the lid to 100°C.</li>
+		<li>Add 2.5 μl of Ligation Mix.</li>
+		<li>Incubate at 30°C for <i>10 minutes</i>.</li>
+		<li>Add 5 μl of Stop Ligation Buffer to each reaction. Gently pipette the entire volume up and down 10 times to mix thoroughly.</li>
+		<li>Clean up the reaction using AmPureXP beads:</li>
+		<ul>
+			<li>Add the following quantity of beads <b>42.5uL</b>.</li>
+			<li>Put on DynaMag until the solution clears.</li>
+			<li>Wash 2 times with 200uL 80% ethanol.</li>
+			<li>Resuspend in the <i>appropriate buffer</i> to start NimbleGen protocol.</li>
+		</ul>
+	</ol>
+	<p>The library portion of the protocol is complete at this point. Continue to QC or the NimbleGen kit.</p>
+	
+<h2>QC the pre-amplified libraries...........................................................................................................................<input type='checkbox'></h2>
+    <p>This step is optional to make sure the library prep worked. In order of workflow and information extracted.</p>
+    <ul>
+    	<li>Qubit</li>
+    	<li>Bioanalyser DNA chip</li>
+    	<li>qPCR of NS loci</li>
+  	
+<p>Proceed to the first step of library preparation <a href="130611_endRepairLigation.html">The End repair and Adapter Ligation protocol</a> </p>
+  	
+ <h6 align='right'>Written by Dan Brown 08 May 2013<h6>
+
+</body>  
+</html>  
