@@ -11,26 +11,21 @@
 </head>  
 <body>
 <h1>Genomic DNA extraction from cell pellets or whole blood<h1>
-<h2>You will need the following consumables</h2>
+<h2>Materials</h2>
 <ul>
-  <li>1ug of high quality genomic DNA per sample</li>
-  <li>NEBnext DNA library preparation kit for Illumina. Only need up to adaptor ligation</li>
-  	<ol>
-  		<li>Illumina adaptors 1 - 12 (kit A)</li>
-  	</ol>
-  <li>Qiaquick PCR clean up columns or equivalent</li>
-  <li><b>550uL</b> <i>Recommended, may change for size selection</i> AMpure XP beads. Bring to room temperature before use</li> <!--Check the amount of Ampure beads I need here-->
-  <li><b>Fresh</b> 80% ethanol for use with the beads</li>
-  <li>SeqCap EZ reagent kit. This contains human COT DNA, primers, PCR master mix and hybridisation/ wash buffers.</li>
-  <li>Dynabeads M-270 strepavidin beads for library capture</li>
-  <li>qPCR reagents for enrichment quantification</li>
-  	<ol>
-  		<li>At least 4 primer pairs for NSC control regions. Consider ordering custom regions.</li>
-  	</ol>
+  <li>Cell pellet or frozen vial</li>
+  <li>Alternatively 200uL of whole blood that has had 1.5mg EDTA:1mL blood or 2% v/v added</li>
+  <li>Nucleospin DNA blood kit</li>
+  <li><b>Proteinase K which comes with the kit. Stored in -20 C</li>
+  <li>RNase that was sourced from CTP lab (may buy some)</li>
+  <li>PBS -/- for resuspending/ washing cell samples</li>
+  <li>100% EtOH</li>
+  <li>Heat block set to 56 C</li>
+  <li>Timer for incubations</li>
   <li>PCR grade water</li>
 </ul>
 
-<h2>Exome capture sample sheet</h2>
+<h2>DNA extraction sample sheet</h2>
 		 <table border="1" cellpadding="15">
 			<tr>
 				<th>Index</th>
@@ -75,26 +70,25 @@
 			</tr>
 			</table>
 </br>
-  <h2>Fragmentation of gDNA. <i>(Gel-free method)</i>...................................................................................................<input type='checkbox' align='right'></h2>
-  <p>Normalise the gDNA samples to a final volume of 60 μl at 20 ng/μl (1.1ug total) into each well of the new 0.2 ml tube labeled with the DNA barcode.</p>
-  <ol>
-  <li>Gently pippette the DNA into a covaris tube, puncturing the rubber stopper. Be careful not to introduce air bubbles at this step.</li>
-  	<li><b>Use a Covaris shearer with the following settings:</b></li>
-  		<ul>
-  			<li>Time: 120 seconds </li>
-  			<li>Temperature: 7 degrees</li>
-  			<li>Duty factor: 10%</li>
-  			<li>Intensity: 5</li>
-  			<li>Cycles per burst: 200</li>
-  			<li>Water level: 12</li>
-  		</ul>
-  	<li>Spin down the covaris tube in a tommy centrifuge and remove the cap. Transfer liquid into a clean 0.2mL tube.</li>
-  	<li>Run 4.5uL of the DNA on an E-gel to inspect the size distribution.</li>
-  	</ol>
+  <h2>Method</i>.........Date completed...........................................................................<input type='checkbox' align='right'></h2>
+  <p>Thaw cell pellets on ice. Equilibriate whole blood to room temperature. Heat 100uL of elution buffer per sample.</p>
+    <ol>
+    <li>Resuspend cell pellet in 200uL of PBS or take a maximum of 200uL of whole blood</li>
+	<li>Add 25 uL of proteinase K</li>
+	<li>Add 200uL of buffer B3 to the sample and <b>vortex vigourously</b>.</li>
+	<li>Add of xuL RNase.</li>
+	<li>Incubate the samples at 56 C for 1 hour, vortexing every few minutes. The lysate should turn brown.</li>
+	<li>Add 210uL of 100% ethanol to the sample and vortex.</li>
+	<li>Load the sample into the binding column. For increased efficiency spin at 2000rpm for 1 minute before a faster spin at 12,000rpm.</li>
+	<li>Replace the collection tube and wash with 500uL buffer BW then B5.</li>
+	<li>Dry the membrane by spinning again.</li>
+	<li>Perform the most efficient elution by adding 50uL of heated elution buffer, incubate for 3min and spin. Repeat with another 50uL of buffer and repeat.</li>
+	</li>Can perform an option ethanol precipitation step to remove any traces of RNase. <a href="../130521_RNaseEtOHppt.html">Ethanol precipitation</a></li>
+	</ol>
   	
-<p>Proceed to the first step of library preparation <a href="130611_endRepairLigation.html">The End repair and Adapter Ligation protocol</a> </p>
+<p>Proceed to shearing DNA <a href="130611_shearing.html">Shearing using the covaris</a> </p>
   	
- <h6 align='right'>Written by Dan Brown 08 May 2013<h6>
+ <h6 align='right'>Written by Dan Brown 13 June 2013<h6>
 
 </body>  
 </html>  
