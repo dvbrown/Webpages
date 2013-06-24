@@ -25,7 +25,35 @@
 
 <p>The procedure couples the extraction of crude RNA/ DNA from a phenol/ chloroform extraction (Trizol) and cleans up the reaction using a Machery Nagel kit.</p>
 
-<h2>Procedure</h2>
+ <table border="1" align="center" cellpadding="15">
+			<tr>
+				<th>Index</th>
+				<th>Sample</th>
+				<th>Index</th>
+				<th>Sample</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>.................................................................</td>
+				<td>4</td>
+				<td>.................................................................</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>.................................................................</td>
+				<td>5</td>
+				<td>.................................................................</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>.................................................................</td>
+				<td>6</td>
+				<td>.................................................................</td>
+			</tr>
+			</tr>
+			</table>
+
+<h2>RNA extraction</h2>
 <h3>Date performed..............................................................................................................................................<input type='checkbox'></h3>
 <ol>
   <li>Resuspend the frozen pellet in 500uL Trizol (depending on cell number). Pipette up and down and incubate for 5 minutes.</li>
@@ -54,13 +82,37 @@
 <p>Use the NEB mRNA magnetic isolation module and start with protocol (A) of the NEBnext mRNA ultra directional kit manual.</p> 
 <ol>
   <li>Prepare the first strand synthesis buffer and store on ice during the mRNA purification.</li>
+ 
+ <table border="1" align="center" cellpadding="15">
+			<tr>
+				<th>Reagent</th>
+				<th>x1 volume (uL)</th>
+				<th>x6 volume + 10% (uL)</th>
+			</tr>
+			<tr>
+				<td style="color:#FF00FF;">NEB first strand synthesis buffer</td>
+				<td >8</td>
+				<td>52.8</td>
+			</tr>
+			<tr>
+				<td style="color:#FF00FF;">NEBnext random primers</td>
+				<td>2 </td>
+				<td>17.6</td>
+			</tr>
+			<tr>
+				<td style="color:#FF00FF;">Nuclease free water</td>
+				<td>10</td>
+				<td>66</td>
+			</tr>
+			</table>
+			
   <li>Dilute the total RNA with nuclease-free water to a final volume of 50 μl in a nuclease-free 0.2 ml PCR tube and keep on ice.</li>
   <li>Prepare the oligo-dT beads</li>
   <ul>
 	  <li>Aliquot 15 μl of NEBNext Oligo d(t)25 beads into a nuclease-free 0.2 ml PCR tube.</li>
 	  <li>Wash the beads by adding 100 μl of 2x RNA Binding Buffer to the beads. Pipette the entire volume up and down 6 times to mix thoroughly.</li>
 	  <li>Place the tubes on the magnetic rack at room temperature for 2 minutes. </li>
-	  <li>Remove and discard all of the supernatant from the tube. take care not to disturb the beads.</li>
+	  <li><b>Remove</b> and discard all of the supernatant from the tube. take care not to disturb the beads.</li>
 	  <li>Remove the tubes from the magnetic rack.</li>
   	  <li>Repeat the wash step.</li>
   </ul>
@@ -69,17 +121,31 @@
   <li>Remove the tube from the thermal cycler when the temperature reaches 4°C.<li>
   <li>Place the tube on the bench and incubate at room temperature for 5 minutes to allow the mRNA to bind to the beads.</li>
   <li>Place the tube on the magnetic rack at room temperature for 2 minutes to separate the poly-A mRNA bound to the beads from the solution.</li>
-  <li>Remove and discard all of the supernatant. take care not to disturb the beads.</li>
+  <li><b>Remove</b> and discard all of the supernatant. take care not to disturb the beads.</li>
   <li>Remove the tube from the magnetic rack and wash the beads by adding 200 μl of Wash Buffer to the tube to remove unbound RNA, mix thoroughly.</li>
   <li>Place the tube on the magnetic rack at room temperature for 2 minutes then Remove and discard all of the supernatant from the tube.</li>
   <li>Remove the tube from the magnetic rack and repeat the wash.</li>
   <li>Add 50 μl of elution buffer to each tube. Gently pipette the entire volume up and down 6 times to mix thoroughly.</li>
   <li>Place the tube on the thermal cycler. Close the lid and heat the samples at 80°C for 2 minutes, then hold at 25°C to elute the Poly-A mRNA from the beads.</li>
   <li>Remove the tube from the thermal cycler when the temperature reaches 25°C.</li>
+  </ol>
+  
+  <h3>Washing of the beads and shearing.................................................................................................<input type='checkbox'></h3>
+  <ol>
+	  <li>Add 50uL of 2X RNA binding buffer to the sample to allow the mRNA to rebind the beads Gently mix by pipette. Incubate at room temp for 5 minutes.</li>
+	  <li>Place on the magnet for 2 minutes then remove and <b>discard the supernatant</b> Do not disturb the beads.</li>
+	  <li>Remove beads from the rack and wash with 200uL of wash buffer. Pipette throughly but gently.</li>
+	  <li>Place on magnetic stand for 2 min then remove and <b>discard the supernatant</b>.</li>
+	  <li>Repeat the wash.</li>
+	  <li>Repeat the wash but this time use 200uL of elution buffer.</li>
+	  <li>Put the tubes on the magnet and remove and <b>discard all the supernatant</b> from the tube.</li>
+	  <li>Remove the tube from the rack then elute the mRNA from the beads by adding 15uL of the first strand synthesis reaction mixture prepared earlier.</br>
+	   Incubate the sample for 94 C for 15 minutes. Then immediately place the tubes on the magnetic rack.</li>
+	   <li>Collect the mRNA by <b>transferring 10uL of the supernatant</b> to a clean PCR tube on ice.</li>
 </ol>
 
-<p>Proceed to mRNA shearing and library preparation === 
-<a href="130606_RNAseqProtocol.html">The mRNA shearing and RNAseq protocol</a> </p>
+<p>Proceed to first strand synthesis ==> 
+<a href="130606_RNAseqProtocol.html">RNA seq library preparation</a> </p>
 
 <!-- The end of the protocol-->
 <h6>Written by Dan Brown 07 June 2013</h6>
