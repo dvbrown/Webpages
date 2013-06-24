@@ -14,12 +14,13 @@
 <h2>You will need</h2>
 <ul>
   <li>50 - 250ng of high quality RNA </li>
+  <li>Actinomycin D. Stock 5ug/uL to 0.1ug/uL.</li>
   <li><b>1x</b> RNA clean-up kit column per sample (eg Macher Nagel XS)</li>
   <li><b>4x</b> DNA clean up column per sample (eg QIAquick)</li>
   <li><b>255uL</b>AMpure XP beads. Bring to room temperature before use</li>
   <li><b>Fresh</b> 80% ethanol for use with the beads</li>
   <li>Unique index primers if you intend on multiplexing. </br>The NEB multiplex oligos for Illumina are the same adaptor sequence as the in-house Illumina ones</li>
-  
+ </ul> 
   
 <table border="1" align="center" cellpadding="15">
 			<tr>
@@ -49,17 +50,48 @@
 			</tr>
 			</table>
   
-<h3>First and second strand cDNA synthesis...............................................................................................<input type='checkbox'></h3>
-  <p>Heat the primer mRNA mix at 65 C first to unfold secondary structure</br>
-  Add reaction buffer and RNase inhibitor incubate again</br>
-  Then perform the reverse transcription reaction</p>
-  Do second strand synthesis</br>
-  Column cleanup. This is a stopping point, after 2.5 hours you store samples at 4 C</p>
+<h3>First strand cDNA synthesis...............................................................................................<input type='checkbox'></h3>
+  <p>Take the prepared mixture from the <a href="130606_RNAextraction.html">mRNA purification and shearing</a>
+  Incubate the samples as follows:
+  <ol>
+  	<li>10 min at 25 C</li>
+  	<li>15 min at 42 C</li>
+  	<li>15 min at 70 C</li>
+  	<li>Hold at 4 C</li>
+  </ol>
+  It is not necessary to clean up the reaction afterwards.</p>
   
-<h3>End repair cDNA..................................................................................................................................................<input type='checkbox'</h3>
-  <p>Switch to a sterile 1.5mL tube and set heat block for 20 C</br>
-   Column cleanup</p>
-   
+<h3>2nd strand synthesis.................................................................................................................<input type='checkbox'></h3>
+ <ol>
+ 	<li>Add the following to the first strand synthesis reaction.</li>
+ 	 <table border="1" align="center" cellpadding="15">
+			<tr>
+				<th>Reagent</th>
+				<th>x1 volume (uL)</th>
+				<th>x6 volume + 10% (uL)</th>
+			</tr>
+			<tr>
+				<td style="color:#FF6600;">2nd strand synthesis mix with dUTP</td>
+				<td >8</td>
+				<td>52.8</td>
+			</tr>
+			<tr>
+				<td style="color:#FF6600;">Second strand synthesis enzyme mix</td>
+				<td>4</td>
+				<td>24.6</td>
+			</tr>
+			<tr>
+				<td style="color:#FF6600;">Nuclease free water</td>
+				<td>48</td>
+				<td>316.4</td>
+			</tr>
+			</table>
+	<li>Mix by pipette.</li>
+	<li>Incubate in a thermocycler for 1 hour at 16 C. <i>The samples can be safely stored at 4 C overnight as cDNA.</i>		
+ </ol>
+ 
+ <!--Up to here-->
+ 
 <h3>dA-tail library...........................................................................................................................................................<input type='checkbox'></h3>
 <p>Set the heat block to 37 C and clean up using a column</p>
 
