@@ -11,6 +11,7 @@
 </head>  
 <body>
 <h1>Procedure for production of cDNA libraries for RNA-seq<h1>
+<p>This protocol will produce strand specific cDNA libraries with low RNA input for sequencing on the Illumina platform.</p>
 <h2>You will need</h2>
 <ul>
   <li>50 - 250ng of high quality RNA </li>
@@ -81,49 +82,167 @@
 				<td>24.6</td>
 			</tr>
 			<tr>
-				<td style="color:#FF6600;">Nuclease free water</td>
+				<td>Nuclease free water</td>
 				<td>48</td>
 				<td>316.4</td>
 			</tr>
 			</table>
 	<li>Mix by pipette.</li>
-	<li>Incubate in a thermocycler for 1 hour at 16 C. <i>The samples can be safely stored at 4 C overnight as cDNA.</i>		
+	<li>Incubate in a thermocycler for 1 hour at 16 C. <i>The samples can be safely stored at 4 C overnight as cDNA.</i></li>
+	<li>Clean up the reaction using the Machery Nagel Gel - PCR clean up kit. Elute in 60uL water.</li>		
  </ol>
  
+<h3>End repair library..........................................................................................................................................<input type='checkbox'></h3>
+<p>Use a new PCR tube and incubate in a thermocycler:
+  <table border="1" align="center" cellpadding="15">
+			<tr>
+				<th>Reagent</th>
+				<th>x1 volume (uL)</th>
+				<th>x6 volume + 10% (uL)</th>
+			</tr>
+			<tr>
+				<td style="color:#339900;">End repair reaction buffer</td>
+				<td >6.5</td>
+				<td>42.9</td>
+			</tr>
+			<tr>
+				<td style="color:#339900;">End prep repair enzyme mix</td>
+				<td>3</td>
+				<td>19.8</td>
+			</tr>
+			<tr>
+				<td>cDNA</td>
+				<td>55.5</td>
+				<td>NA</td>
+			</tr>
+			</table>
+<ol>
+	<li>30 minutes at 20 C</li>
+	<li>30 minutes at 65 C</li>
+	<li>Hold at 4 C</li>
+</ol>
+Proceed <b>directly</b> to adapter ligation.</li>
+</p>
+
+<h3>Adapter ligation..............................................................................................................................<input type='checkbox'></h3>
+<p>Use 65uL of the reaction from A tailing and perform in a PCR machine set to 20 C and paused.</br>
+  <table border="1" align="center" cellpadding="15">
+			<tr>
+				<th>Reagent</th>
+				<th>x1 volume (uL)</th>
+				<th>x6 volume + 10% (uL)</th>
+			</tr>
+			<tr>
+				<td style="color:#990000;">Blunt/TA ligase Mix</td>
+				<td >15</td>
+				<td>99</td>
+			</tr>
+			<tr>
+				<td style="color:#990000;">NEBnext adapter</td>
+				<td>1</td>
+				<td>6.6</td>
+			</tr>
+			<tr>
+				<td>Water</td>
+				<td>2.5</td>
+				<td>16.5</td>
+			</tr>
+			</table>
+<ol>
+	<li>15 minutes at 20 C</li>
+	<li>Hold at 4 C</li>
+</ol>
+The adapter comes from the NEBnext multiplex oligo kit. The USER excision step is performed during the reaction.
+</p>
+
+<h3>Size selection........................................................................................................................................<input type='checkbox'></h3>
+<p>Another critical step.</b> Make sure the <b>AmpureXP beads are at room temp</b> and well mixed. Make up 80% ethanol <b>fresh</b></br>
+It is best to conduct size selection in 0.2mL PCR tubes and a ring magnet.</p>
+<ol>
+	<li>To 83.5uL of the ligation reaction add 16.5uL of nuclease free water to bring the reaction volume to 100uL.</li>
+	<li>Add 60uL <b>(0.6x)</b> resuspended AMPure XP beads and mix by a vortex. Incubate for 5 minutes at room temperature.</li>
+	<li>Spin the tube on a tommy and place on a magnetic rack for 5 minutes or until the solution is clear.
+	</br><b>Transfer the supernatant</b> to a clean tube and keep it! Retain the beads only for insurance purposes.</li>
+	<li>Add 25uL <b>(0.25x)</b> resuspended AMPure XP beads to 160uL of the supernatant. Mix well and incubate for 5 minutes at room temperature.</li>
+	<li>Spin the tube on a tommy and place on a magnetic rack to separate beads from the supernatant. After 5 minutes or when the solution is 
+	clear <b>carefully remove</b> and discard the <b>supernatant</b>. Do not disturb the beads.</li>
+	<li>Add 200uL of freshly prepared ethanol to the tube while in the magnetic rack. Incubate for 30 sec and then discard the supernatant.</li>
+	<li>Do another wash</li>
+	<li>Briefly spin the tube in a tommy and put back into the magnetic rack.</li>
+	<li>Completely remove the ethanol and air dry beads with the lid open for 10 minutes at room temperature. It is critical not to overdry the beads as they will crack.</li>
+	<li>Elute the target cDNA from the beads with 25uL of nuclease-free water. Mix well and spin in a tommy.</li>
+	<li>Without disturbing the beads transfer 20uL of the supernatant to a clean PCR tube. It is <b>critical</b> not to carry any beads over to the PCR enrichment as it will fail. If necessary perform a second magnetic incubation.</li>
+</ol>
+
  <!--Up to here-->
+
+<h3>USER excision, indexing and PCR enrichment.....................................................................................<input type='checkbox'></h3>
+<p>Make sure the right tube has the right index added to it!</br>
+ The cycle number can be between 12 - 15 cycles depending on the input mRNA. 15 cycles is recommended for 10ng mRNA.</p>
+ <table border="1" align="center" cellpadding="15">
+			<tr>
+				<th>Reagent</th>
+				<th>x1 volume (uL)</th>
+				<th>x6 volume + 10% (uL)</th>
+			</tr>
+			<tr>
+				<td style="color:#CC0000;">USER enzyme</td>
+				<td >3</td>
+				<td>99</td>
+			</tr>
+			<tr>
+				<td style="color:#000099;">High fidelity PCR master mix 2x</td>
+				<td>25</td>
+				<td>6.6</td>
+			</tr>
+			<tr>
+				<td style="color:#000099;">Universal PCR primer 25uM</td>
+				<td>1</td>
+				<td>16.5</td>
+			</tr>
+			<tr>
+				<td style="color:#000099;">Index primer 25uM <b>unique!</b></td>
+				<td>1</td>
+				<td>16.5</td>
+			</tr>
+			<tr>
+				<td>Size selected cDNA</td>
+				<td>20</td>
+				<td>16.5</td>
+			</tr>
+			</table>
+			
+<p>PCR cycling conditions.</p>
+<ol>
+	<li>User digest 15 min @ 37 C</li>
+	<li>Denature 10 sec @ 98 C</li>
+	<li>Cycling
+	<ul>
+		<li>Denature 10 sec @ 98 C</li>
+		<li>Anneal 30 sec @ 65 C</li>
+		<li>Extend 30 sec @ 72 C</li>
+	</ul></li>
+	<li>Final extension 5 min @ 72 C</li>
+	<li>Hold 4 C</li>
+</ol>			
+<p>Purify the PCR product with a Machery Nagel Gel-PCR clean-up kit. <b>Elute in 20uL water</b>.</p>			
  
-<h3>dA-tail library...........................................................................................................................................................<input type='checkbox'></h3>
-<p>Set the heat block to 37 C and clean up using a column</p>
-
-<h3>Adapter ligation of library....................................................................................................................................<input type='checkbox'></h3>
-<p><b>This is a critical step.</b> Perform in a PCR machine set to 25 C.</br>
-Make sure the AMpure beads have equilibrated to room temp.</br>
-Make a master mix of the adapter-reaction buffer mixture. Add the ligase separate and take out of freezer at the last minute.</br>
-Add USER enzyme after the ligation and set to 37 C</br>
-Purify by 1.8x conc AMpure beads (90uL)</p>
-
-<h3>Size selection....................................................................................................................................................<input type='checkbox'></h3>
-<b>Another critical step.</b> Start with 0.9x Ampure beads (135uL). Mix well</br>
-After incubating on the magnet <b>keep the supernatant</b></br>
-Add 0.2x beads (30uL) to the supernatant and mix well. After incubation on the magnet <b>Keep the beads</b></p>
-
-<h3>PCR enrich the library and attach indexes.................................................................................................................................<input type='checkbox'></h3>
-<p>Use a PCR tube again. Make sure the right tube has the right index added to it!</br>
- The cycle number can be between 10 - 12 cycles depending on the input mRNA. 12 cycles is recommended for 50ng mRNA.</br>
- Purify with a PCR cleanup column</p>
- <h4>Assess the quality of the cDNA library before sequencing by running on a high sensitivity chip bioanalyser.</h4>
+ <h3>Library QC before sequencing</h3>
+<p>Seqanswers recommends measuring the concentration of each cDNA library on a Qubit high sensitivity DNA kit before pooling.</br>
+NEB recommends diluting each library 1:4 and assessing the size distribution of the library on a high sensitivity chip bioanalyser.</br> 
+Seqanswers suggests bioanalyser alone is not very quantitative</p>
  
- <h4>Some tips for when handling beads</h4>
+ <h4>Appendix: Some tips for when handling beads</h4>
 <ul>
 <li>When opening tube lids on the magnet, hold down the tube so liquid doesn't splash everywhere</li>
 <li>If the pellet is diffuse, especially during enzymatic clean-up give the tube a jiggle when still in the magnet</li>
 <li>Suck up supernatant slowly as to not disturb the beads</li>
 <li>For the final elution it is critical not to contaminate the PCR with beads. It is better to elute twice</li>
-<li>The volume of beads for size selection is critical. Measure the volume of DNA by pipette. It is more accurate to dial down.
-</br>Top up the solution to 150uL if required</li>
+<li>The volume of beads for size selection is critical. Measure the volume of DNA by pipette. It is more accurate to dial down.</li>
+<li>Top up the solution to 150uL if required</li>
 </ul>
 
- <h6 align='right'>Written by Dan Brown 31 August 2012<h6>
+ <h6 align='right'>Written by Dan V Brown 6 June 2013<h6>
 
 </body>  
 </html>  
