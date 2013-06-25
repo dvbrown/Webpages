@@ -58,3 +58,12 @@ a {
 
 a:hover {
 }
+
+/*
+The below code writes a menu using javascript -> document write function defined in menuBar,js
+*/
+#navmenu ul {margin: 0; padding: 0; text-align: center; font-size: 18px;
+	list-style-type: none; list-style-image: none; }
+#navmenu li {display: inline; padding: 5px 20px 5px 20px}
+#navmenu a {text-decoration:none; color: blue; }
+#navmenu a:hover {color: purple; }
