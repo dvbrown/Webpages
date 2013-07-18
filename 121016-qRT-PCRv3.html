@@ -25,34 +25,36 @@
 </ul>
 
 <h2>Reverse transcription</h2>
-<p>The choice of kit is largely arbitrary. A mixture of random hexamer and poly-dT primer works best.</br>
-A pe-incubation of RNA and primers at 65 &#8226;C for 10 min enables more efficient priming. Make sure you include a non transcription control.</br>
+<p>The choice of kit is largely arbitrary. A 1:1 mixture of random hexamer and poly-dT primer covers both bases.</br>
+A pe-incubation of RNA and primers at 65 &#8226;C for 10 min enables more efficient priming due to removal of RNA secondary structure. Make sure you include a non transcription control.</br>
 ie: include all buffers but not the enzyme.</p>
 
 <h2>Setting up your 384 well plate map</h2>
-<p>The plating robot pipettes the SYBR green master mix from 1.5mL tubes first in horizontal fashion. Therefore set up horizontal 384 well replicates with the master mix in replicate.</br>
+<p>The plating robot pipettes the master mix from 1.5mL tubes first in horizontal fashion. Therefore set up horizontal 384 well replicates with the 1.5mL solution as the incremental replicate.</br>
 From experience technical replicates have high accuracy so technical duplicates are recommended. Biological triplicates are always necessary for publication.</br>
-The robot then adds the 96 well samples in batches of replicates. What this means is the samples are changing with each block of replicates <i>(eg primers)</i>.</p>
+The robot then adds the 96 well samples in batches of replicates. What this means is the conditions/ combination are changing with each block of replicates <i>(eg primers or cDNA)</i>.</p>
   
 <h2>Set up of your samples on a 96 well plate</h2>
-<p>Generally the samples are the primers arrayed in 96 well format.</br>
-However they can be the cDNA if you have many samples with only a few targets.</p>
+<p>Generally the samples are the primers arrayed in 96 well format, in the case of having few samples and many targets.</br>
+However they can be the cDNA/ SYBR green mix, if you have many samples with only a few targets.</p>
 <ol>
   <li>Array your primers horizontally on a 96 well plate</li>
-  <li>The plating robot can handle replicates but it pipettes from the 96 well plate <b>after SYBR in the 1.5mL tube</b></li>
-  <li>Click on the short cut to robotics icon on the desktop</li>
+  <!--Need to check if the robot pipettes the primers or the SYBR green first -->
+  <li>The plating robot can handle replicates but it pipettes from the 96 well plate first <b>after SYBR in the 1.5mL tube</b></li>
+  <li>Switch the robot on at the back then click on the short cut to robotics icon (Corbett) on the desktop</li>
   <li>Use a the file DanB_template as a template</li>
   <li>Add your samples to the 96 well plate by clicking its image and selecting "new bank".Then select your wells, type in your sample name, add to selection and click "done"</li>
   <li>As above for your mastermix in the left most panel, representing 1.5mL tubes. Set to aliquot 6&#956;L.</li>
   <li>Now you are ready to set up your 384 well plate. Click on the 384 well image and click "add" on the right panel. From the drop list choose your sample and then the master mix.</br>
   Set the volume dispensed to 4uL and the correct number of replicates <i>(eg 3)</i></li>
   <li>Load <b>50&#956;L</b> tips in the appropriate positions on the deck. Make sure they click into the receptacle. Right click the tip panel and set to "all available tips".</li>
-  <li>Press the green arrow to begin the run. You have the option of export the plate map. You will need a USB stick.</li>
+  <li>Press the green arrow to begin the run. You have the option of export the plate map. You will need a USB stick.</br>
+  The machine usually makes complaints about the pipetting volume and running out of tips.</li>
 </ol>
   <li>The machine will stop if it runs out of tips and you will have to load some more. Click on the appropriate postion in the warning screen to restart the run.</li>
   
 <h2>Set up of your samples on the lightcycler instrument</h2>
-<p>Remember to seal the surface of your plate</p>
+<p>Remember to seal the surface of your plate. It is beneficial to pulse spin the 384 well plate to collect all the liquid on the bottom.</p>
 <ol>  
   <li>Click on the lightcycler icon on the desktop</li>
   <li>The username is "admin" and password is "LightCycler480". <b>Case sensitive</b> Choose GEL DB R database to log on to</li>
@@ -61,8 +63,8 @@ However they can be the cDNA if you have many samples with only a few targets.</
   <ul>
     <li>Preincubation 50 &#8226;C for 2 min.</br>
     95 &#8226;C for 2 min</li>
-    <li>Amplification 95 &#8226;C for 15 sec then 55 - 65 &#8226;C for 30 sec</li>
-    <li>A melt curve for SYBR green, continuos measurement</li>
+    <li>Amplification 95 &#8226;C for 15 sec + 55 - 65 &#8226;C for 30 sec + 72&#8226;C 30 sec. Acquire at the annealing step.</li>
+    <li>A melt curve for SYBR green, continuous measurement. Start at the melting temp then set target to 95&#8226;C.</li>
     </ul>
   <li>Press the green start button to begin your run</li>
 </ol>
@@ -72,19 +74,20 @@ However they can be the cDNA if you have many samples with only a few targets.</
 <ol>
   <li>Click on analysis tab. Go to create new analysis -> absolute quantification and 2nd derivative.</li>
   <li>You will see the amplification curves. Now set the analysis to high confidence and then click calculate. This takes a few minutes.</li>
-  <li>Change to the results panel and export the data as a text file you can open in excel</li>
-  <li>Click + to generate a new analysis -> Tm calling. Set to SYBR green I format and click calculate to see the melting curves</li>
+  <li>Change to the results panel, select all wells (or just the ones you put sample in) and export the data as a text file (right click - export table)</li>
+  <li>If you are not inclined to use plain text files, right click the file -> "open in excel". Once in excel save as an excel spreadsheet.</li>
+  <li>Navigate the mouse to the top panel drop down menu. Change analysis to Tm calling. Set to SYBR green I format and click calculate to see the melting curves</li>
   </ol>
   
 <h2>Analysis by ddCT method</h2>
 <p>The ddCT method is a relative quantification formula that assumes the amplification rate of your templates are equal.</p>
   <ol>
     <li>Use the python script 'transposeLinear.py' to convert the 384 well plate map to a linear vector.</li>
-    <li>In R import the 384wellLayoutTranspose.txt file and bind it to the transpose sample map using cbind</li>
+    <li>In R import the 384wellLayoutTranspose.txt file and bind it to the transposed sample map using cbind</li>
     <li>Use the custom annotate sample function to annotate the raw Ct file</li>
     <li>Use the split sample name function to split the annotation by whitespace into separate gene and sample factors</li>
     <li>In Excel use the <b>ddCt formula</b> <i>2^((houseKeepingX - targetX) - (houseKeepingC - targetC))</i>. X stands for unknown sample and C for Control sample.</li>
-    <li>Plot in SPSS using the clustered bar chart</li>
+    <li>Plot in R or Graphpad Prism</li>
   </ol>  
   
 <h6 align="right">Written by Dan Brown 16 October 2012</h6>
