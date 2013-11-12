@@ -16,10 +16,11 @@
 <h2>You will need (for 6 samples)</h2>
 <ul>
   <li>50 - 250ng of high quality RNA </li>
-  <li>Actinomycin D. Stock 5ug/uL to 0.1ug/uL.</li>
+  <li>Actinomycin D. Stock conc is 5ug/uL to 0.1ug/uL working conc.</li>
   <li>2x DNA clean up column per sample (eg QIAquick)</li>
   <li>85uL (550uL) AMpure XP beads. Bring to room temperature before use</li>
   <li>6mL fresh 80% ethanol for use with the beads</li>
+  <li>A ring magnet. Can borrow a good one from CTP. Their magnet is Post-PCR however so clean it before use.</li>
   <li>Unique index primers if you intend on multiplexing. </br>The NEB multiplex oligos for Illumina are the same adaptor sequence as the in-house Illumina ones</li>
  </ul> 
   
@@ -88,7 +89,7 @@
 			</tr>
 			</table>
 	<li>Mix by pipette.</li>
-	<li>Incubate in a thermocycler for 1 hour at 16 C. <i>The samples can be safely stored at 4 C overnight as cDNA.</i></li>
+	<li>Incubate in a thermocycler for 1 hour at 16 °C. <i>The samples can be safely stored at 4 °C overnight as cDNA.</i></li>
 	<li>Clean up the reaction using the Machery Nagel Gel - PCR clean up kit. Elute in 60uL water.</li>		
  </ol>
  
@@ -125,7 +126,7 @@ Proceed <b>directly</b> to adapter ligation.</li>
 </p>
 
 <h3>Adapter ligation..............................................................................................................................<input type='checkbox'></h3>
-<p>Use 65uL of the reaction from A tailing and perform in a PCR machine set to 20 C and paused.</br>
+<p>Use 65uL of the reaction from A tailing and perform in a PCR machine set to 20 °C and paused.</br>
 According to Agilent technologies it is best to <b>not</b> heat the lid during ligation to prevent adapter dimers.
   <table border="1" align="center" cellpadding="15">
 			<tr>
@@ -157,7 +158,8 @@ The adapter comes from the NEBnext multiplex oligo kit. The USER excision step i
 </p>
 
 <h3>Size selection........................................................................................................................................<input type='checkbox'></h3>
-<p>Another critical step.</b> Make sure the <b>AmpureXP beads are at room temp</b> and well mixed. Make up 80% ethanol <b>fresh</b></br>
+<p>Another critical step.</b> Make sure the <b>AmpureXP beads are at room temp</b> and well mixed. It is best to leave them at room temp for 30 minutes prior to use. 
+Make up 80% ethanol <b>fresh</b></br>
 It is best to conduct size selection in 0.2mL PCR tubes and a ring magnet.</p>
 <ol>
 	<li>To 83.5uL of the ligation reaction add 16.5uL of nuclease free water to bring the reaction volume to 100uL.</li>
@@ -179,7 +181,8 @@ It is best to conduct size selection in 0.2mL PCR tubes and a ring magnet.</p>
 
 <h3>USER excision, indexing and PCR enrichment.....................................................................................<input type='checkbox'></h3>
 <p>Make sure the right tube has the right index added to it!</br>
- The cycle number can be between 12 - 15 cycles depending on the input mRNA. 15 cycles is recommended for 10ng mRNA.</p>
+ The cycle number can be between 12 - 15 cycles depending on the input mRNA. 15 cycles is recommended for 10ng mRNA. 
+ Remember that less is more for RNA-seq and too much PCR wil create molecular duplicates that waste sequencing reads.</p>
  <table border="1" align="center" cellpadding="15">
 			<tr>
 				<th>Reagent</th>
