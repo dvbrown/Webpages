@@ -8,7 +8,7 @@
   <!--[if lt IE 9]>  
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
   <![endif]-->
-  <link rel="stylesheet" type="text/css" href="pinky.css"/
+  <link rel="stylesheet" type="text/css" href="plain.css"/
 </head>  
 <body>
 <h1 align="center">Quantitative reverse transcription PCR</h1>
@@ -82,7 +82,11 @@ The robot then adds the 96 well samples in batches of replicates. What this mean
   
 <h2>Set up of your samples on a 96 well plate</h2>
 <p>Generally the samples are the primers arrayed in 96 well format, in the case of having few samples and many targets.</br>
-However they can be the cDNA/ SYBR green mix, if you have many samples with only a few targets.</p>
+However they can be the cDNA/ SYBR green mix, if you have many samples with only a few targets.</br>
+The most common concentration for primers is 400nM total or 200nM each <i>ie forward and reverse</i>. The working stock concentration of primers is 10uM. Given that the volume of primer + water is 4uL this means you should add
+0.2uL of each primer or 0.4uL of a primer mix to 3.6uL of water.</br>
+Therefore multiply the amount of primer by the number of replicates to make pipetting volumes easier.</p>
+<!-- Think about a better calculation so you just add 4uL of a pre-diluted mixture -->
 <ol>
   <li>Array your primers horizontally on a 96 well plate</li>
   <!--Need to check if the robot pipettes the primers or the SYBR green first -->
