@@ -17,7 +17,7 @@
 <h2>You will need:</h2>
 <ul>
   <li>Anywhere from 10ng to 1&#956;g total RNA</li>
-  <li>Reverse transcription kit (first strand synthesis)</li>
+  <li>Reverse transcription kit (SuperScript III First strand supermix) -> #11752-050</li>
   <li>SYBR green mix</li>
   <li>384 well plate for Lightcycler</li>
   <li>96 well <b>(V-bottom)</b> for samples</li>
@@ -72,8 +72,24 @@
 
 <h2>Reverse transcription</h2>
 <p>The choice of kit is largely arbitrary. A 1:1 mixture of random hexamer and poly-dT primer covers both bases.</br>
-A pe-incubation of RNA and primers at 65 &#8226;C for 10 min enables more efficient priming due to removal of RNA secondary structure. Make sure you include a non transcription control.</br>
-ie: include all buffers but not the enzyme.</p>
+The amount of RNA you reverse transcribe is dependent on the total amount available and the copy number of the target you wish to amplify. 5ng has been quoted as a reasonable amount of RNA to amplify in a reaction.</br>
+Working backwards this is 5ng x 1:4 dilution x 20&#956;L reaction mix = 400ng of total RNA. Note quantification is performed on RNA not cDNA.</p>
+<ol>
+  <li>Combine the following reagents on ice in 0.2mL PCR tubes</li>
+  <ul>
+    <li>2x RT reaction mix</li>
+    <li>RT Enzyme mix</li>
+    <li>Total RNA</li>
+    <li>DEPC water (included in the kit)</li>
+  </ul>
+  
+  <li>Mix the contents of the tube and incubate at 50 C for 30 minutes in a thermocycler</li>
+  <li>Terminate the reaction at 85 C for 5 minutes and then chill on ice</li>
+  <li>Add 1&#956;L of RNase H <b><small>(careful not to contaminate your pipette or bench!)</b></small> incubate at 37 C for 30 minutes</bold></small></li>
+  <li>Store at -20 C and use at a 1:4 dilution</li>
+</ol>
+<p>*<small>A pre-incubation of RNA and primers at 65 &#8226;C for 10 min enables more efficient priming due to removal of RNA secondary structure. Make sure you include a non transcription control.</br>
+ie: include all buffers but not the enzyme.</small></p>
 
 <h2>Setting up your 384 well plate map</h2>
 <p>The plating robot pipettes the master mix from 1.5mL tubes first in horizontal fashion. Therefore set up horizontal 384 well replicates with the 1.5mL solution as the incremental replicate.</br>
