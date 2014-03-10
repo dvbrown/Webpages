@@ -77,21 +77,28 @@ The amount of RNA you reverse transcribe is dependent on the total amount availa
 For example, working backwards this is 5ng x 1:4 dilution x 20&#956;L reaction mix = 400ng of total RNA. If you reverse transcribe more RNA, then dilute it more in the qPCR reaction.</br>
 
 <h3>This javascript bit needs work</h3>
+
+<form action="" id="amountRNA" onsubmit="return false">
 <input type='text' id='RNA_per_rxn'/>
 <input type='text' id='total_RNA'/>
 <button onlick="calculate();" value="calculate">Calculate</button>
 </form>
-<p id ="result"></p>
+<p id ="result">This is the result</p>
 
-	<script>
-	function calculate() {
-	var RNA_per_rxn = document.getElementById("RNA_per_rxn");
-	var total_RNA = document.getElementById("total_RNA");
-	var dilution = Number(total_RNA) * Number(RNA_per_rxn);
+<script>
+function calculate() {
+// Retreive from the form text boxes labeled with ID amountRNA
+	var RNAamount = document.forms["amountRNA"];
+	var RNA_per_rxn = RNAamount.elements["RNA_per_rxn"];
+	var total_RNA = RNAamount.elements["total_RNA"];
+	//If the textbox is not blank
+	if(total_RNA.value!="") {
+		var dilution = Number(total_RNA) + Number(RNA_per_rxn);
+	  }
 	return dilution;
-	}
+}
 document.getElementById("result").innerHTML=calculate();
-	</script>
+</script>
   
 Note quantification is performed on RNA not cDNA.</p>
 <ol>
