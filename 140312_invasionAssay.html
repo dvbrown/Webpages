@@ -106,7 +106,41 @@ Make sure you save as!</p>
 </ul>
 
 <h2>Analysis of images</h2>
-<p>Use a ImageJ script I am yet to invent</p>
+<p>ImageJ is free software. It requires a java 6 virtual machine but is cross platform.
+You can use metamorph too if you have access.</p>
+
+<h3>Using the image J script "measureSpheroidArea.ijm"</h3>
+<p>This macros takes a directory of spheroid images and prompts the user to set manual thresholds and to draw a circle to identify the spheres.</br>
+The macros outputs the segmented, processed images in 8 bit format. It also writes the data to an excel spreadsheet.</br>
+To use the macros, place the folder "invasionAssay" in /Applications/ImageJ/macros <small><i>(I don't do PC :/)</small></i></p>
+
+<ol>
+	<li>Go to imageJ tool bar plugins -> macros -> run. Select <b>measureSpheroidArea.ijm</b></li>
+	<li>Select the source directory (folder) containing your images. Only <i>.tif</i> files will be read.</li>
+	<li>Select the output folder that will contain your data and the processed images. You <b>must</b> select 
+	a different folder or the files will be overwritten. You can simply click "New Folder"</li>
+	<li>The first image will open and then ask you to set the threshold. If you can't find the threshold pane, it is behind the open image.
+	Drag the threshold pane to another location.</li>
+	<li>Set the threshold that will identify your sphere by sliding the bars around. Click "Set" and then "OK" on the popup panel"</li>
+	<li>Next move and adjust the elipse that is in the center of the image. Draw it around the invasive outgrowths.</li>
+	<li>Click "OK" on the panel that has these instructions</li>
+	<li>Rinse and repeat for all images in the directory.</li>
+	<li>When all images are analysed, name the output excel file that contains the data.</li>
+	</ol>
+	
+<p>First calibrate the number of pixels to a know distance (eg 1mm ruler). In the ImageJ macro "measure spheroid area" this is automated.</p>
+<ol>
+	<li>Open the image called 1mmRuler.tif</li>
+	<li>Open image. Go to File/Open, and select image.
+	<li>Select line tool.
+	<li>Draw a line the length of the object.
+	<li>Go to Analyze/Measure, and record pixel number.
+	<li>Calculate the number of pixels in each mm (eg. 600 pixels/mm). I recommend at least 3 measurements and take the mean.</li>
+	<li>Record result <b>1316 pixels/mm</b></li>
+	<li>Each time you open ImageJ you will need to set the scale. Go Analyze/ Set scale.</li>
+	<li>For “Distance in pixels” input value the calibration. Tick the "Global" button to save your settings for this session.</li>
+	<li>For “Know distance” input “1,000”. For “Unit of Length” input “um”.</li>
+</ol>
 
 <h6>Written by Daniel V Brown 12 March 2014</h6>
 </body>  
