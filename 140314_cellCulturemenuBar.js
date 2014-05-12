@@ -8,4 +8,5 @@ document.write('<div id="navmenu"> \
 	<li><a href="glioma-stem-cell-culture.html">Gliomasphere culture</a></li> \
 	<li><a href="140312_invasionAssay.html">Spheroid invasion assay</a></li> \
 	<li><a href="140312_resazurinLDH.html">Resazurin/ LDH assay</a></li> \
+	<li><a href="130606_FACSsortGIC.html">FACS sorting</a></li> \
 </ul></div>');

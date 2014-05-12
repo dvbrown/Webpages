@@ -5,6 +5,7 @@ This script prints a menu on the top of protocol pages. The style NAVMENU is def
 
 document.write('<div id="navmenu"> \
 <ul> \
+	<li><a href="glioma-stem-cell-culture.html">Gliomasphere culture</a></li> \
 	<li><a href="130606_FACSsortGIC.html">FACS sorting</a></li> \
 	<li><a href="130606_RNAextraction.html">RNA Extraction</a></li> \
 	<li><a href="130606_RNAseqProtocol.html">RNA-seq library prep</a></li> \
