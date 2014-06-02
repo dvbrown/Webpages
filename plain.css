@@ -60,6 +60,16 @@ a:hover {
 }
 
 /*
+Add a page break property
+*/
+
+
+page_break { 
+page-break-after: always; 
+}
+
+
+/*
 The below code writes a menu using javascript -> document write function defined in menuBar,js
 */
 #navmenu ul {margin: 0; padding: 0; text-align: center; font-size: 18px;
