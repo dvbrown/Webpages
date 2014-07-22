@@ -21,62 +21,63 @@
   <li>Reverse transcription kit (SuperScript III First strand supermix) -> #11752-050</li>
   <li>SYBR green mix</li>
   <li>384 well plate for Lightcycler</li>
-  <li>96 well <b>(V-bottom)</b> for samples</li>
-  <li>A plating robot</li>
   <li>A lightcycler 480 qPCR machine</li>
+  <li>96 well <b>(V-bottom)</b> for samples. (Automated setup)</li>
+  <li>A plating robot (Automated setup)</li>
 </ul>
 
-<h2 align="center">Sample sheet</h2>
-<table border="1" align="center" cellpadding="15">
+<h2 align="center">Sample sheet for reverse transcription</h2>
+		 <table border="1" cellpadding="10">
 			<tr>
-				<th>Index</th>
 				<th>Sample</th>
-				<th>Index</th>
+				<th>Name</th>
 				<th>Sample</th>
-				<th>Index</th>
+				<th>Name</th>
 				<th>Sample</th>
-				<th>Index</th>
-				<th>Sample</th>
+				<th>Name</th>
 			</tr>
 			<tr>
 				<td>1</td>
-				<td>.............................</td>
-				<td>4</td>
-				<td>.............................</td>
-				<td>7</td>
-				<td>.............................</td>
-				<td>10</td>
-				<td>.............................</td>
+				<td>No template control:     </td>
+				<td>5</td>
+				<td> <form><input type="text" name="isotype"> </form> </td>
+				<td>9</td>
+				<td> <form><input type="text" name="S9"> </form> </td>
 			</tr>
 			<tr>
 				<td>2</td>
-				<td>.............................</td>
-				<td>5</td>
-				<td>.............................</td>
-				<td>8</td>
-				<td>.............................</td>
-				<td>11</td>
-				<td>.............................</td>
+				<td> <form><input type="text" name="PI"> </form> </td>
+				<td>6</td>
+				<td> <form><input type="text" name="S6"> </form> </td>
+				<td>10</td>
+				<td> <form><input type="text" name="S10"> </form> </td>
 			</tr>
 			<tr>
 				<td>3</td>
-				<td>.............................</td>
-				<td>6</td>
-				<td>.............................</td>
-				<td>9</td>
-				<td>.............................</td>
-				<td>12</td>
-				<td>.............................</td>
+				<td><form><input type="text" name="CD44"> </form> </td>
+				<td>7</td>
+				<td> <form><input type="text" name="S7"> </form> </td>
+				<td>11</td>
+				<td> <form><input type="text" name="S11"> </form> </td>
 			</tr>
-
-			</table></br>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td> <form><input type="text" name="CD133"> </form> </td>
+				<td>8</td>
+				<td> <form><input type="text" name="S8"> </form> </td>
+				<td>12</td>
+				<td> <form><input type="text" name="S12"> </form> </td>
+			</tr>
+			</table>
 
 <h2>Reverse transcription</h2>
-<p>The choice of kit is largely arbitrary. A 1:1 mixture of random hexamer and poly-dT primer covers both mature mRNAs and precursor RNAs.</br>
-The amount of RNA you reverse transcribe is dependent on the total amount available and the copy number of the target you wish to amplify. 5ng has been quoted as a reasonable amount of cDNA to amplify in a qRT-PCR reaction.</br>
-For example, working backwards this is 5ng x 1:10 dilution x 20&#956;L reaction mix = 1000ng of total RNA. If you reverse transcribe less RNA, then dilute the cDNA less before the qPCR reaction.</br>
 
-<h3>Reverse transcription calculator</h3>
+<p>The choice of kit is largely arbitrary. A 1:1 mixture of random hexamer and poly-dT primer covers both mature mRNAs and precursor RNAs. Not all kits give the choice of primer combinations and a primer premix may be the only option.</br>
+The amount of RNA you reverse transcribe into cDNA is dependent on the total amount available and the copy number of the target you wish to amplify. 5ng has been quoted as a reasonable amount of cDNA to amplify in a qRT-PCR reaction using a 384 well format. Therefore there will be 5ng cDNA in each 384 well.</br>
+For example, working backwards this is 5ng = 1000ng of total RNA input x 1:10 dilution of reverse transcription reaction x 20&#956;L reaction mix volume. If you reverse transcribe less input RNA, then reduce the dilution of the reverse transcription reaction.</br>
+
+<h4>Reverse transcription calculator <small>N.B Dan stills needs to work on his javascript</small></h4>
 
 <script type='text/javascript' >
 function startCalc(){
@@ -102,6 +103,8 @@ x <input class="right" type=text name="secondBox" value="" onFocus="startCalc();
 </form></p>
   
 Note quantification is performed on RNA not cDNA.</p>
+<h3>Setup of reverse transcription reaction</h3>
+
 <ol>
   <li>Combine the following reagents on ice in 0.2mL PCR tubes</li>
   <ul>
@@ -111,54 +114,28 @@ Note quantification is performed on RNA not cDNA.</p>
     <li>DEPC water (included in the kit) -> to 20uL</li>
   </ul>
   
-  <li>Make an extra reaction for a no template control <small>(make 10uL of it though)</small></li>
+  <li>Make an extra reaction for a no template control <small>(make 10uL of it though to save money on reagents)</small></li>
+  <li>Optional pre-incubation*</li>
   <li>Mix the contents of the tube and incubate at 50 C for 30 minutes in a thermocycler</li>
   <li>Terminate the reaction at 85 C for 5 minutes and then chill on ice</li>
   <li>Add 1&#956;L of RNase H <b><small>(careful not to contaminate your pipette or bench!)</b></small> incubate at 37 C for 30 minutes</bold></small></li>
   <li>Store at -20 C and use at a 1:4 dilution</li>
 </ol>
-<p>*<small>A pre-incubation of RNA and primers at 65 &#8226;C for 10 min enables more efficient priming due to removal of RNA secondary structure. Make sure you include a non transcription control.</br>
+<p>*<small>(optional) A pre-incubation of RNA and primers at 65 &#8226;C for 10 min enables more efficient priming due to removal of RNA secondary structure. Make sure you include a non transcription control.</br>
 ie: include all buffers but not the enzyme.</small></p>
 
-<h2>Setting up your 384 well plate map</h2>
-<p>The plating robot pipettes the master mix from 1.5mL tubes first in horizontal fashion. Therefore set up horizontal 384 well replicates with the 1.5mL solution as the incremental replicate.</br>
-From experience technical replicates have high accuracy so technical duplicates are recommended. Biological triplicates are always necessary for publication.</br>
-The robot then adds the 96 well samples in batches of replicates. What this means is the conditions/ combination are changing with each block of replicates <i>(eg primers or cDNA)</i>.</p>
+<!-- ################## QPCR SETUP ####################### -->
 
-<h4>Set up of tubes of cDNA + SYBR green</h4>
-<p>The product from the cDNA synthesis is diluted 10 fold. Therefore if you reverse transcribed 1ug of RNA in 50uL you will
-theoretically have 2ng of cDNA per 384 well.</br> Pipette 1uL of this mixture + 5uL of SYBR green mix (per well) 
-into a 1.5mL tube. 6uL of this mixture is to be combined with 4uL of the primer mixture described below.
-</p>
-
-<h2>Set up of your samples on a 96 well plate</h2>
-<p>Generally the samples are the primers arrayed in 96 well format, in the case of having few samples and many targets.</br>
-However they can be the cDNA/ SYBR green mix, if you have many samples with only a few targets.</br>
+<h2>qRT-PCR reaction</h2>
+<p>You have the choice of setting up your qPCR reaction manually or using a corbett robot. The Corbett robot has the advantage of being (mostly) mistake-free and you can set up and walk away. The disadvantage is that there is a considerable dead volume and our comparisons have shown manual pipetting to be more reproducible.</br>
+The manual setup is somewhat more convenient as you can take your time with the setup. The disadvantage is that is really hurts your hand pipetting and there is the potential for human error. The choice is yours...</p>
 
 <h4>Ideal primer concentration</h4>
 
 <p>The most common concentration for primers is 200 - 1000nM. I prefer a total of <b>400nM</b> or 200nM each <small>(ie forward and reverse primer)</small>.</p>
-<p>The working stock concentration of primers is 10uM. Given that the volume of primer + water is 4uL this means you should add
-0.2uL of each primer or 0.4uL of a primer mix to 3.6uL of water.
-Therefore multiply the amount of primer by the number of replicates to make pipetting volumes easier.</p>
-<!-- Think about a better calculation so you just add 4uL of a pre-diluted mixture -->
-<ol>
-  <li>Array your primers horizontally on a 96 well plate</li>
-  <!--Need to check if the robot pipettes the primers or the SYBR green first -->
-  <li>The plating robot can handle replicates but it pipettes from the 96 well plate first <b>after SYBR in the 1.5mL tube</b></li>
-  <li>Switch the robot on at the back then click on the short cut to robotics icon (Corbett) on the desktop</li>
-  <li>Use a the file DanB_template as a template</li>
-  <li>Add your samples to the 96 well plate by clicking its image and selecting "new bank".Then select your wells, type in your sample name, add to selection and click "done"</li>
-  <li>As above for your mastermix in the left most panel, representing 1.5mL tubes. Set to aliquot 6&#956;L.</li>
-  <li>Now you are ready to set up your 384 well plate. Click on the 384 well image and click "add" on the right panel. From the drop list choose your sample and then the master mix.</br>
-  Set the volume dispensed to 4uL and the correct number of replicates <i>(eg 3)</i></li>
-  <li>Load <b>50&#956;L</b> tips in the appropriate positions on the deck. Make sure they click into the receptacle. Right click the tip panel and set to "all available tips".</li>
-  <li>Press the green arrow to begin the run. You have the option of export the plate map. You will need a USB stick.</br>
-  The machine usually makes complaints about the pipetting volume and running out of tips.</li>
-</ol>
-  <li>The machine will stop if it runs out of tips and you will have to load some more. Click on the appropriate postion in the warning screen to restart the run.</li>
-  </br>
-  
+<p>The working stock concentration of primers is 10uM. Given that the volume of primer + water is 4uL this means you should add 0.2uL of each primer or 0.4uL of a primer mix to 3.6uL of water.
+Therefore multiply the amount of primer by the number of replicates +10% to make pipetting volumes easier.</p>
+
 <h2>Set up of your samples on the lightcycler instrument</h2>
 <p>Remember to seal the surface of your plate. It is beneficial to pulse spin the 384 well plate to collect all the liquid on the bottom.</p>
 <ol>  
@@ -194,7 +171,43 @@ Therefore multiply the amount of primer by the number of replicates to make pipe
     <li>Use the split sample name function to split the annotation by whitespace into separate gene and sample factors</li>
     <li>In Excel use the <b>ddCt formula</b> <i>2^((houseKeepingX - targetX) - (houseKeepingC - targetC))</i>. X stands for unknown sample and C for Control sample.</li>
     <li>Plot in R or Graphpad Prism <small>because they are much prettier than excel</small></li>
-  </ol>  
+  </ol> 
+
+<!-- Set up 96 well -->
+<h2>Automated (Robotic) setup</h2>
+
+<h3>Set up of your primers on a 96 well plate</h3>
+<p>Generally the samples are the primers arrayed in 96 well format, in the case of having few samples and many targets.</br>
+However they can be the cDNA/ SYBR green mix, if you have many samples with only a few targets.</br>
+
+<ol>
+  <li>Array your primers horizontally on a 96 well plate</li>
+  <!--Need to check if the robot pipettes the primers or the SYBR green first -->
+  <li>The plating robot can handle replicates but it pipettes from the 96 well plate first <b>after SYBR in the 1.5mL tube</b></li>
+  <li>Switch the robot on at the back then click on the short cut to robotics icon (Corbett) on the desktop</li>
+  <li>Use a the file DanB_template as a template</li>
+  <li>Add your samples to the 96 well plate by clicking its image and selecting "new bank".Then select your wells, type in your sample name, add to selection and click "done"</li>
+  <li>As above for your mastermix in the left most panel, representing 1.5mL tubes. Set to aliquot 6&#956;L.</li>
+  <li>Now you are ready to set up your 384 well plate. Click on the 384 well image and click "add" on the right panel. From the drop list choose your sample and then the master mix.</br>
+  Set the volume dispensed to 4uL and the correct number of replicates <i>(eg 3)</i></li>
+  <li>Load <b>50&#956;L</b> tips in the appropriate positions on the deck. Make sure they click into the receptacle. Right click the tip panel and set to "all available tips".</li>
+  <li>Press the green arrow to begin the run. You have the option of export the plate map. You will need a USB stick.</br>
+  The machine usually makes complaints about the pipetting volume and running out of tips.</li>
+</ol>
+  <li>The machine will stop if it runs out of tips and you will have to load some more. Click on the appropriate postion in the warning screen to restart the run.</li>
+  
+  <!-- Set up 384 well -->
+<h3>Setting up your 384 well plate map</h3>
+<p>The plating robot pipettes the master mix from 1.5mL tubes first in horizontal fashion. Therefore set up horizontal 384 well replicates with the 1.5mL solution as the incremental replicate.</br>
+From experience technical replicates have high accuracy so technical duplicates are recommended. Biological triplicates are always necessary for publication.</br>
+The robot then adds the 96 well samples in batches of replicates. What this means is the conditions/ combination are changing with each block of replicates <i>(eg primers or cDNA)</i>.</p>
+
+<h4>Set up of tubes of cDNA + SYBR green</h4>
+<p>The product from the cDNA synthesis is diluted 10 fold. Therefore if you reverse transcribed 1ug of RNA in 50uL you will
+theoretically have 2ng of cDNA per 384 well.</br> Pipette 1uL of this mixture + 5uL of SYBR green mix (per well) 
+into a 1.5mL tube. 6uL of this mixture is to be combined with 4uL of the primer mixture described below.
+</p>
+  </br>
   
 <h6 align="right">Written by Dan Brown 16 October 2012</h6>
 </body>  
