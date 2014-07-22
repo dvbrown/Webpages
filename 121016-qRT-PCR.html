@@ -164,7 +164,7 @@ Therefore multiply the amount of primer by the number of replicates +10% to make
   <ul>
     <li>Preincubation 50 &#8226;C for 2 min.</br>
     <li>95 &#8226;C for 2 min</li>
-    <li>Amplification 95 &#8226;C for 15 sec + 55 - 65 &#8226;C for 30 sec + 72&#8226;C 30 sec. Acquire at the annealing step.</li>
+    <li>Amplification 95 &#8226;C for 15 sec + 60 &#8226;C for 30 sec + 72&#8226;C 30 sec. Acquire at the annealing step.</li>
     <li>A melt curve for SYBR green, continuous measurement. Start at the melting temp then set target to 95&#8226;C.</li>
     </ul>
   <li>Press the green start button to begin your run</li>
@@ -183,11 +183,9 @@ Therefore multiply the amount of primer by the number of replicates +10% to make
 <h2>Analysis by ddCT method</h2>
 <p>The ddCT method is a relative quantification formula that assumes the amplification rate of your templates are equal.</p>
   <ol>
-    <li>Use the python script 'transposeLinear.py' to convert the 384 well plate map to a linear vector.</li>
-    <li>In R import the 384wellLayoutTranspose.txt file and bind it to the transposed sample map using cbind</li>
-    <li>Use the custom annotate sample function to annotate the raw Ct file</li>
-    <li>Use the split sample name function to split the annotation by whitespace into separate gene and sample factors</li>
-    <li>In Excel use the <b>ddCt formula</b> <i>2^((houseKeepingX - targetX) - (houseKeepingC - targetC))</i>. X stands for unknown sample and C for Control sample.</li>
+  <li>The author of this document has laboriously written an R library for the analysis of qPCR data. This library takes the raw qPCR data and outputs various QC plots and does all plots and stats testing</li>
+  <li>If you are not comfortable with the command line <small>I pity you</small> you can mung the data manually in Excel</li>
+  <li>Once the data is prepared in Excel use the <b>ddCt formula</b> <i>2^((houseKeepingX - targetX) - (houseKeepingC - targetC))</i>. X stands for unknown sample and C for Control (calibrator) sample.</li>
     <li>Plot in R or Graphpad Prism <small>because they are much prettier than excel</small></li>
   </ol> 
 
