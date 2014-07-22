@@ -119,25 +119,43 @@ Note quantification is performed on RNA not cDNA.</p>
   <li>Mix the contents of the tube and incubate at 50 C for 30 minutes in a thermocycler</li>
   <li>Terminate the reaction at 85 C for 5 minutes and then chill on ice</li>
   <li>Add 1&#956;L of RNase H <b><small>(careful not to contaminate your pipette or bench!)</b></small> incubate at 37 C for 30 minutes</bold></small></li>
-  <li>Store at -20 C and use at a 1:4 dilution</li>
+  <li>For storage at -20 C it is more convenient to transfer the contents of the 0.2mL tube into a 1.5mL tube as they fit in freezer boxes better. 0.2mL tubes will drop inside the slots and make tube retrieval difficult.</li>
+  <li>Store at -20 C and use at the pre-determined dilution in qPCR</li>
 </ol>
 <p>*<small>(optional) A pre-incubation of RNA and primers at 65 &#8226;C for 10 min enables more efficient priming due to removal of RNA secondary structure. Make sure you include a non transcription control.</br>
 ie: include all buffers but not the enzyme.</small></p>
 
 <!-- ################## QPCR SETUP ####################### -->
+<page_break> </page_break>
 
 <h2>qRT-PCR reaction</h2>
+
+<p>Before setting up the qRT-PCR reaction <b>plan your 384 well plate</b>. Use the following template <a href="384well_duplicateVersion.xlsx">384 well template</a>
 <p>You have the choice of setting up your qPCR reaction manually or using a corbett robot. The Corbett robot has the advantage of being (mostly) mistake-free and you can set up and walk away. The disadvantage is that there is a considerable dead volume and our comparisons have shown manual pipetting to be more reproducible.</br>
 The manual setup is somewhat more convenient as you can take your time with the setup. The disadvantage is that is really hurts your hand pipetting and there is the potential for human error. The choice is yours...</p>
 
 <h4>Ideal primer concentration</h4>
 
-<p>The most common concentration for primers is 200 - 1000nM. I prefer a total of <b>400nM</b> or 200nM each <small>(ie forward and reverse primer)</small>.</p>
-<p>The working stock concentration of primers is 10uM. Given that the volume of primer + water is 4uL this means you should add 0.2uL of each primer or 0.4uL of a primer mix to 3.6uL of water.
+<p>The most common concentration for primers is 200 - 1000nM. I prefer a total of <b>400nM</b> or 200nM each <small>(ie forward and reverse primer)</small>.</br>
+The working stock concentration of primers is 10uM. Given that the volume of primer + water is 4uL this means you should add 0.2uL of each primer or 0.4uL of a primer mix to 3.6uL of water.
 Therefore multiply the amount of primer by the number of replicates +10% to make pipetting volumes easier.</p>
 
-<h2>Set up of your samples on the lightcycler instrument</h2>
-<p>Remember to seal the surface of your plate. It is beneficial to pulse spin the 384 well plate to collect all the liquid on the bottom.</p>
+<h2>Manual set up of qRT-PCR</h2>
+<h3>Setting up 1.5ml tubes for pipetting</h3>
+<p>Note that this setup can be done the day before the qPCR booking and the plate can be stored sealed at 4 C overnight.</p>
+
+<ol>
+  <li>Prepare a 1.5mL tube of primer mix for <b>each</b> primer combination. This mix should contain the forward and reverse primer at <b>800nM</b> (2x mixture). The volume should be 5uL per reaction plus pipetting error.</li>
+  <li>Prepare a 1.5mL tube of <b>each</b> sample cDNA + SYBR green combination. This mixture should contain 5ng of cDNA per well + 5uL of SYBR green per well plus pipetting error.</li>
+  <li>The author finds it easier to pipette the cDNA/ SYBR tubes horizontally such that all wells in the horizontal orientation receive the same solution.</li>
+  <li>Take a break and then pipette the primer/ water mixture vertically such that all wells in the vertical orientation receive the same primer. Do not mix wells at this point, just drop the solution in</li>
+  <li>Have a rest, then take a 12 well multi-channel pipette and fit all 12 positions with a tip. Hold the multichannel vertically and pipette all wells up and down to mix. Notice that the tip goes in every 2nd slot. Move the pipette to the next column of the plate and also pipette and up and down using the same tip. As you are mixing the duplicates cross-contamination is not an issue.</li>
+  <li>Change tips and go back to the first column you pipetted and mix the wells that were missed the first time. Also mix the next column</li>
+  <li>Repeat for all columns and take a well deserved break</li>
+</ol>
+
+<h3>Set up of your samples on the lightcycler instrument</h3>
+<p>Remember to seal the surface of your plate. It is beneficial to pulse spin the 384 well plate to collect all the liquid on the bottom. The plate spinner is in the same lab as the lightcycler.</p>
 <ol>  
   <li>Click on the lightcycler icon on the desktop</li>
   <li>The username is "admin" and password is "LightCycler480". <b>Case sensitive</b> Choose GEL DB R database to log on to</li>
@@ -173,6 +191,8 @@ Therefore multiply the amount of primer by the number of replicates +10% to make
     <li>Plot in R or Graphpad Prism <small>because they are much prettier than excel</small></li>
   </ol> 
 
+<!-- ################## ROBOT SETUP ####################### -->
+<page_break> </page_break>
 <!-- Set up 96 well -->
 <h2>Automated (Robotic) setup</h2>
 
