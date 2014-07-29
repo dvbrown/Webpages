@@ -74,9 +74,11 @@
 			</tr>
 			</table>
 			
+<!-- Page break -->
+<page_break> </page_break>
 
 <h2>RNA extraction</h2>
-<h3>Date performed..............................................................................................................................................<input type='checkbox'></h3>
+<h4>Date performed......................................................................<input type='checkbox'></h4>
 <p>Perform the following steps in a fume hood until you have extracted the aqueous layer.</p>
 <ol>
   <li>Resuspend the frozen pellet in 500uL Trizol (depending on cell number). Pipette up and down and incubate for 5 minutes.</li>
@@ -92,17 +94,6 @@
   </ul>
 </ol>  
 
-<h4>RNA purification using clean up kit</h4>  
-  <p>Note the clean up kit is expensive and recommended when material is limiting and when very clean RNA is required <small>(eg NGS)</small></p>
-<ol>
-  <li>Add 1 volume of buffer RCU (330uL) from the RNA XS clean up kit</li>
-  <li>Load the RNA XS column twice with 315uL of extract to avoid overloading the column.</li>
-  <li>Wash with 400uL of buffer RA3, spin and then a second wash with 200uL of RA3.</li>
-  <li>Elute with the maximum of 30uL of distilled water provided in the kit.</li>
-  <li>Make a <b>1:5 dilution</b> and quantify using the Qubit in DNA extraction room of CTP lab.</li>
-  <li>Use the diluted sample for a RNA pico bioanalyser run in the range of 200 - 5000pg/uL. Look for 2 sharp peaks and a RIN of > 7</li>
-</ol>
-
 <h4>RNA purification using isopropanol and ethanol</h4>
 <p>This is the cheaper method and is applicable when material is not limiting (eg cell lines) and super clean RNA is not as important (eg RT_PCR)</p>
   <ol>
@@ -115,10 +106,21 @@
   </ol>  	
 <p>Recommended amount of total RNA for the RNA-seq library preparation is 100ng - 1ug. A lower limit of <b>200ng</b> RNA is advised.</p>
 
+<h4>RNA purification using clean up kit</h4>  
+  <p>Note the clean up kit is expensive and recommended when material is limiting and when very clean RNA is required <small>(eg NGS)</small></p>
+<ol>
+  <li>Add 1 volume of buffer RCU (330uL) from the RNA XS clean up kit</li>
+  <li>Load the RNA XS column twice with 315uL of extract to avoid overloading the column.</li>
+  <li>Wash with 400uL of buffer RA3, spin and then a second wash with 200uL of RA3.</li>
+  <li>Elute with the maximum of 30uL of distilled water provided in the kit.</li>
+  <li>Make a <b>1:5 dilution</b> and quantify using the Qubit in DNA extraction room of CTP lab.</li>
+  <li>Use the diluted sample for a RNA pico bioanalyser run in the range of 200 - 5000pg/uL. Look for 2 sharp peaks and a RIN of > 7</li>
+</ol>
 
 <h2>mRNA purification</h2>
-<p>This step is only required for RNA-seq or microarray. If you area doing qPCR proceed to first strand synthesis</p>
-<h3>Date performed..............................................................................................................................................<input type='checkbox'></h3>
+<p>This step is only required for RNA-seq or microarray. If you area doing qPCR proceed to first strand synthesis
+ <a href="121016-qRT-PCR.html">reverse transcription protocol</a>.</p>
+<h4>Date performed.............................................................<input type='checkbox'></h4>
 <p>Use the NEB mRNA magnetic isolation module and start with protocol (A) of the NEBnext mRNA ultra directional kit manual.</p> 
 <ol>
   <li>Prepare the first strand synthesis buffer and store on ice during the mRNA purification.</li>
