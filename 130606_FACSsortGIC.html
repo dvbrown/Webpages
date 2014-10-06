@@ -30,13 +30,13 @@
 				<td>1</td>
 				<td> <form>Unstained: <input type="text" name="Unstained"></form> </td>
 				<td>5</td>
-				<td> <form>IgG1-APC (isotype 1): <input type="text" name="isotype"> </form> </td>
+				<td> <form>IgG1-APC, IgM-PE (isotype): <input type="text" name="isotype"> </form> </td>
 				<td>9</td>
 				<td> <form>Isotype 3: <input type="text" name="S9"> </form> </td>
 			</tr>
 			<tr>
 				<td>2</td>
-				<td> <form>PI only: <input type="text" name="PI"> </form> </td>
+				<td> <form>CD133-APC only: <input type="text" name="PI"> </form> </td>
 				<td>6</td>
 				<td> <form>Sort 1: <input type="text" name="S6"> </form> </td>
 				<td>10</td>
@@ -44,7 +44,7 @@
 			</tr>
 			<tr>
 				<td>3</td>
-				<td><form>CD44-FITC only: <input type="text" name="CD44"> </form> </td>
+				<td><form>CD15-PE only: <input type="text" name="CD44"> </form> </td>
 				<td>7</td>
 				<td> <form>Isotype 2: <input type="text" name="S7"> </form> </td>
 				<td>11</td>
@@ -53,7 +53,7 @@
 			</tr>
 			<tr>
 				<td>4</td>
-				<td> <form>CD133-APC only: <input type="text" name="CD133"> </form> </td>
+				<td> <form>CD44-FITC only: <input type="text" name="CD133"> </form> </td>
 				<td>8</td>
 				<td> <form>Sort 2: <input type="text" name="S8"> </form> </td>
 				<td>12</td>
@@ -67,16 +67,17 @@
     <li>Complete media for sample collection</li>
     <li>FACS buffer. Store this buffer <b>cold</b></li>
     <ol>
-    	<li>Dulbecco's PBS - 50mL</li>
+    	<li>Hank's Balanced Salt Solution (HBSS) - 50mL</li>
     	<li>1% Fetal Calf Serum (FCS) - 500uL</li>
-    	<li>2mM EDTA - 200uL of 0.5M</li>
-    	<li>Propidium Iodide - add just before sort</li>
+    	<li>DNase I</li>
+    	<li>Propidium Iodide/ DAPI - add just before sort</li>
     </ol>
     <li>45uM cell strainer</li>
     <li>FACS tubes</li>
     <li>Accutase</li>
     <li>Wash buffer - DMEM/F12 + Pen/ Strep</li>
     <li>CD133-APC conjugate antibody (clone AC133 #130-098-829) </li>
+    <li>CD15_PE (SSEA-1) conjugate antibody (clone MC-480) </li>
     <li>CD44-FITC conjugate antibody (clone DB105 #130-098-210) </li>
     <li>Isotype control Keyhole limpet hemocyanin (not expressed in humans) BD Bio340442</li>
 </ul>
@@ -164,7 +165,7 @@
 	<li>Be sure to run the PI only, isotype control and CD133 positive control first.</li>
 </ol>
 
-<h2>FACS procedure 2 markers (CD133 and CD44)</h2>
+<h2>FACS procedure 3 markers (CD133, CD44 and CD15)</h2>
 <ol>
 	<li>At step 10 of neurosphere dissociation add 5uL of CD133-APC and 5uL of CD44-FITC to samples</li>
 	<li>Be sure to run the PI only, CD133-APC only and CD44-FITC only controls and ensure proper compensation.</li>
