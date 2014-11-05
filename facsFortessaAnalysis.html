@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>FACS analysis of patient derived glioma cells</title>
+<meta name="Daniel Brown" content="a RNase protocol" />
+<meta name="robots" content="index,follow" />
+<link rel="stylesheet" type="text/css" href="plain.css"/>
+<!--[if lte IE 7]>
+<link rel="stylesheet" href="/scripts/layout/css/patches_3_3_1/patch_layout.css" />
+<![endif]-->
+<link href="http://www.embl.org/rss/embl_news.xml" type="application/rss+xml" rel="alternate" title="EMBL News" />
+    </head>
+    
+<body>
+<script type="text/javascript" src="130625_menuBar.js"> </script>
+
+<h1>Analysis of patient derived glioma cells on FACSscan fortessa</h1>
+               
+<h2>FACS Input sample sheet</h2>
+		 <table border="1" cellpadding="10">
+			<tr>
+				<th>Sample</th>
+				<th>Name + cell number</th>
+				<th>Sample</th>
+				<th>Name + cell number</th>
+				<th>Sample</th>
+				<th>Name + cell number</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td> <form>Unstained: <input type="text" name="Unstained"></form> </td>
+				<td>5</td>
+				<td> <form>IgG1-APC, IgM-PE (isotype): <input type="text" name="isotype"> </form> </td>
+				<td>9</td>
+				<td> <form>Isotype 3: <input type="text" name="S9"> </form> </td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td> <form>CD133-APC only: <input type="text" name="PI"> </form> </td>
+				<td>6</td>
+				<td> <form>Sort 1: <input type="text" name="S6"> </form> </td>
+				<td>10</td>
+				<td> <form>Sort 3: <input type="text" name="S10"> </form> </td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td><form>CD15-PE only: <input type="text" name="CD44"> </form> </td>
+				<td>7</td>
+				<td> <form>Isotype 2: <input type="text" name="S7"> </form> </td>
+				<td>11</td>
+				<td> <form> Isotype 4: <input type="text" name="S11"> </form> </td>
+			</tr>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td> <form>CD44-FITC only: <input type="text" name="CD133"> </form> </td>
+				<td>8</td>
+				<td> <form>Sort 2: <input type="text" name="S8"> </form> </td>
+				<td>12</td>
+				<td> <form>Sort 4: <input type="text" name="S12"> </form> </td>
+			</tr>
+			</table>           
+
+            
+        <h2>Materials</h2>
+<ul>
+    <li>Complete media for sample collection</li>
+    <li>HBSS buffer for FACS. Store this buffer <b>cold</b></li>
+    <ol>
+    	<li>1x Hank's Balanced Salt Solution (HBSS) - 50mL</li>
+    	<li>1% Fetal Calf Serum (FCS) - 500uL</li>
+    	<li>DNase I</li>
+    	<li>DAPI - add just before sort</li>
+    </ol>
+    <li>45uM cell strainer</li>
+    <li>FACS tubes</li>
+    <li>Accutase</li>
+    <li>Wash buffer - DMEM/F12 + Pen/ Strep</li>
+    <li>CD133-APC conjugate antibody (clone AC133 #130-098-829) </li>
+    <li>CD15_PE (SSEA-1) conjugate antibody (clone MC-480) </li>
+    <li>CD44-FITC conjugate antibody (clone DB105 #130-098-210) </li>
+    <li>Isotype control Keyhole limpet hemocyanin (not expressed in humans) BD Bio340442</li>
+</ul>
+
+<!--The protocol starts here-->
+<h2>Procedure for neurosphere dissociation</h2>
+<p>Work quickly and on ice to maximise viability. This procedure can be performed on the bench.</p>
+<ol>
+    <li>Pipette cells from dishes into appropriate sized falcon tube. 
+    Rinse empty wells with some wash buffer and add to tube.</li>
+    <li>Spin at 1000xg for 5 minutes in a centrifuge at 4°C.</li>
+    <li>Resuspend in 5mL wash buffer and spin again.</li>
+    <li>Resuspend in 500uL - 3mL accutase as appropriate for cell number</li>
+    <li>Incubate at <b>37 °C</b> for 2x 5 minutes, resuspending cells with a pipette in between.</li>
+    <li>Dilute accutase with 4mL FACS buffer<b> (cold)</b>. Put through 45uM cell strainer into a fresh 50mL tube.</br>
+    Pipette some FACS buffer first to wet the membrane. Transfer 5mL of cells to a FACS tube.</li>
+    <li>Transfer approximately 10% <b>(500uL)</b> of this cell suspension to another FACS tube to be the isotype control.</li>
+    <li>For the sample with most cells, take an additional 3 tubes for single stain controls.</li>
+    <li>Take 50uL for a trypan blue count and record cell number on sample sheet.</li>
+</ol>
+    
+<h2>Antibody labelling</h2>
+<ol>
+    <li>Spin down at 500xg at 4°C for 5 minutes.</li>
+    <li>Resuspend in 90uL <i>for 100uL final vol</i>. 
+    Add 5uL (1:21) CD133 antibody or isotype control, depending on the sample.</li>
+    <li>Incubate for <b>20 minutes</b> in the dark in the fridge (dark).</li>
+    <li>Wash with 1mL of FACS buffer and centrifuge for 500xg at 4°C for 5 minutes.</li>
+    <li>Resuspend in a sufficient amount <b>minimum 500uL</b> of FACS buffer for FACS sorting. Aim for 5 - 10 million cells per mL.</li>
+    <li>Before sorting add 1:100 of 1mg/mL (final 1ug/mL) PI to each tube. This is 5uL of Iwan's buffer for 500uL cells.</li>
+</ol>
+
+<!-- Make a page break -->
+<page_break> </page_break>
+
+<h2>FACS collection sample sheet</h2>
+		 <table border="1" cellpadding="10">
+			<tr>
+				<th>Sample</th>
+				<th>Name + cell number</th>
+				<th>Sample</th>
+				<th>Name + cell number</th>
+				<th>Sample</th>
+				<th>Name + cell number</th>
+			</tr>
+			<tr>
+				<td>C_1</td>
+				<td> <form>Name: <input type="text" name="Unstained"></form> </td>
+				<td>C_5</td>
+				<td> <form>Name: <input type="text" name="isotype"> </form> </td>
+				<td>C_9</td>
+				<td> Name: <input type="text" name="S9"> </form> </td>
+			</tr>
+			<tr>
+				<td>C_2</td>
+				<td> <form>Name: <input type="text" name="PI"> </form> </td>
+				<td>C_6</td>
+				<td> <form>Name: <input type="text" name="S6"> </form> </td>
+				<td>C_10</td>
+				<td> <form>Name: <input type="text" name="S10"> </form> </td>
+			</tr>
+			<tr>
+				<td>C_3</td>
+				<td><form>Name: <input type="text" name="CD44"> </form> </td>
+				<td>C_7</td>
+				<td> <form>Name: <input type="text" name="S7"> </form> </td>
+				<td>C_11</td>
+				<td> <form> Name: <input type="text" name="S11"> </form> </td>
+			</tr>
+			<tr>
+				<td>C_4</td>
+				<td> <form>Name: <input type="text" name="CD133"> </form> </td>
+				<td>C_8</td>
+				<td> <form>Name: <input type="text" name="S8"> </form> </td>
+				<td>C_12</td>
+				<td> <form>Name: <input type="text" name="S12"> </form> </td>
+			</tr>
+			</table>
+
+<h2>FACS procedure 3 markers (CD133, CD44 and CD15)</h2>
+<ol>
+	<li>At step 10 of neurosphere dissociation add 5uL of CD133-APC and 5uL of CD44-FITC to samples</li>
+	<li>Be sure to run the PI only, CD133-APC only and CD44-FITC only controls and ensure proper compensation.</li>
+	<li>Ask if it valid to use a  Fluorescence Minus One (FMO) control for CD44. This will use the CD133, PI sample.</li>
+	<li>Collect the 4 different populations {(CD133+, CD44+). (CD133+, CD44-), (CD133-, CD44+), (CD133-, CD44-)}.
+	</ol>
+	
+<h2>Using the FACS scan fortessa. Room 810, phone 48636 for help.</h2>
+<ol>
+	<li>Check the level of the waste container and the sheath fluid. Waste takes 1 pack diversol then down the sink.</li>
+	<li>Log into the machine: username: admin. password: BDIS</li>
+	<li>Click on BD software</li>
+	<li>Prime the machine twice.</li>
+	<li>Click new experiment, newtube. Make sure the green arrow is markered on.</li>
+	<li>Changing samples. CLick next tube. Physically change tube. Press acquire, check gates then press record.</li>
+	<li>At the end of run. Run the 3 tubes present on the rack. 1. buffer, ethanol and water. Press stnad by.</li>
+	<li>The machine can now be turned off.</li>
+	<li>On the software right click specimen, then export FCS 3.0 to a UBS stick.</li>
+	</ol>
+	
+	
+<p>Fluorescence compensation is the mathematical subtraction of the fluorescence due to one fluorochrome from the fluorescence due to another fluorochrome. This is necessary because emission spectra from two fluorochromes can overlap.</p>
+
+<h6>Written by Daniel V Brown 4 November 2014</h6>
+    </body>
+</html>
