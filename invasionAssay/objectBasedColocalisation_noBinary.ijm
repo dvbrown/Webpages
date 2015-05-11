@@ -11,14 +11,11 @@ It then runs the Squaash algorithm to quantify object based coolocalisation.
 dir1 = getDirectory("Choose the parental folder containing the images");
 list = getFileList(dir1);
 
-// Background correct, threshold and make binary
+// Background correct
 function binarise(image) 
 	{
 	open(dir1 + image);
 	run("Subtract Background...", "rolling=100");
-	setAutoThreshold("Moments");
-	setOption("BlackBackground", false);
-	run("Make Binary", "thresholded remaining black");
 	}
 
 //.................................................................
@@ -34,7 +31,7 @@ function merge(image1, image2, mergedFilename) {
 // Run the Squash algorithm
 function run_squassh() 
 	{
-	run("Squassh", "  colored labeled save number=1 threshold_channel_1=0.0015 threshold_channel_2=0.0015 regularization=0.050 regularization=0.050 minimum_object_intensity,_channel_1=0.150 _channel_2=0.150 exclude standard=0.80 standard=0.80 remove=0 local=Automatic noise=Gauss " + "text1="+dir1);
+	run("Squassh", "regularization=0.050 regularization=0.050 minimum_object_intensity,_channel_1=0.150 _channel_2=0.150 exclude standard=0.80 standard=0.80 remove=0 local=Automatic noise=Gauss " + "text1="+dir1);
 	}
 
 //.................................................................
