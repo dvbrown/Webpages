@@ -48,10 +48,14 @@ for (i=0; i<fields.length; i++){
 	mergedFilename = sampleStart + "_merged.tif";
 	print("The script is running ", olig, " ", CD44, " ", mergedFilename,"\n");
 
-	binarise(olig);
-	binarise(CD44);
+	//binarise(olig);
+	//binarise(CD44);
 	merge(olig, CD44, mergedFilename);
+	close();
 
+	print("The script is Squaashing ", mergedFilename, "currently\n");
+	
+	open(dir1 + mergedFilename);
 	//run_squassh();
 	close();	
 	}
