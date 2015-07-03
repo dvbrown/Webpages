@@ -30,7 +30,7 @@ function merge(image1, image2, image3, mergedFilename) {
     run("Size...", "width=900 height=668 constrain average interpolation=Bilinear");
     saveAs("Tiff", dir1 + mergedFilename);
 
-    //close();
+    close();
 	}
 
 //.................................................................
@@ -45,7 +45,7 @@ fields = newArray("1","2","3","4","5");
 
 for (i=0; i<fields.length; i++){
 	sampleStart = fields[i];
-    
+    dapi = sampleStart + "_" + "DAPI.tif";
 	olig = sampleStart + "_" + "OLIG.tif";
     open(dir1 + olig);
     run("Subtract Background...", "rolling=500");
@@ -53,13 +53,13 @@ for (i=0; i<fields.length; i++){
 	CD44 = sampleStart + "_" + "CD44.tif";
     open(dir1 + CD44);
     run("Subtract Background...", "rolling=500");
+    run("Enhance Contrast...", "saturated=0.001");
 
 	mergedFilename = sampleStart + "_merged.tif";
 	print("The script is running ", olig, " ", CD44, " ", mergedFilename,"\n");
 
-    dapi = sampleStart + "_" + "DAPI.tif";
 	maskDAPI(dapi);
 	merge(CD44, olig, dapi, mergedFilename);
 
-	//close();	
+	close();	
 	}
