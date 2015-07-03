@@ -49,6 +49,7 @@ for (i=0; i<fields.length; i++){
 	olig = sampleStart + "_" + "OLIG.tif";
     open(dir1 + olig);
     run("Subtract Background...", "rolling=500");
+    run("Enhance Contrast...", "saturated=0.001");
 
 	CD44 = sampleStart + "_" + "CD44.tif";
     open(dir1 + CD44);
