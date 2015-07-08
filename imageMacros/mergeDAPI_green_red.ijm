@@ -40,7 +40,7 @@ function merge(image1, image2, image3, mergedFilename) {
 
 // Intialise a new array containing the first letter of the filenames
 fields = newArray("1","2","3","4","5");
-fields = newArray("1","2", "3");
+fields = newArray("1","2");
 
 for (i=0; i<fields.length; i++){
 	sampleStart = fields[i];
