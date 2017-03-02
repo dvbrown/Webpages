@@ -1,0 +1,191 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+  <meta charset="utf-8">  
+  <title>SMART-Seq info page</title>  
+  <meta name="Daniel Brown" content="Cancer Signaling">  
+  <!-- change the stylesheet <link rel="stylesheet" href="css/styles.css?v=1.0">  -->
+  <!--[if lt IE 9]>  
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="plain.css"/
+</head>  
+<body>
+
+<h1 align="center">SMART-Seq Description</h1>
+<p>
+SMART-Seq is a single-cell RNA-seq method that generates full transcript length information. It is currently the most widely published single-cell RNA-Seq method. Current limitations include restriction to polyadenylated mRNAs and lack of strand information. We have developed an automated pipeline that begins with 96 well plates containing single-cell lysates and ends with Illumina sequencing data.
+</p>
+
+<h2>Workflow</h2>
+<p>
+Our automated workflow is optimised for 4x 96 well plates per run.
+</p>
+<ul>
+  <li>Inputs are 96 well plates containing cell lysates</li>
+  <li>Optional stopping point amplified cDNA products</li>
+  <li>Optional stopping point pooled libraries ready for Illumina sequencing</li>
+  <li>Output is a fastq and bam file for each single-cell</li>
+</ul>
+
+<!-- ################## Important information for the customer ####################### -->
+
+<h2>Important information</h2>
+<p>
+Reliable single-cell FACS sorting is a critical parameter. Please consult your respective FACS core facility before optimizing single-cell sorting. The cell isolation should be as rapid as possible to preserve gene expression programs and viability. Tissue dissociation may require optimization.
+</p>
+
+<p>
+We are required to optimize the number of PCR cycles for amplification and concentration of ERCCs (synthetic mRNAs) to spike into the assay. These paramenters are influenced by the RNA content of your cell of interest which is proportional to cell size.
+</p>
+
+<p>
+Due to the cost of quality control we cannot guarantee completely even number of sequencing reads per cell. We perform QC on 10% of samples per 96 well plate and use the average value to calculate concentrations for pooling.
+</p>
+
+<h2>Controls</h2>
+<p>
+To assist with quality control experimentally in addition to  in the analysis proper controls are necessary. You are required to sort at least 1 multi-cell control (10 cells) and 1 empty well control.
+To minimize batch effects and improve data quaility it is beneficial to have mixed treatments on the same plate eg. half a plate with single-cells from wild-type and half a plate with single-cells from knockout.
+</p>
+
+<!-- ################## Sample submission inputs ####################### -->
+
+<h2>Project name</h2>
+
+<h2>Project description</h2>
+
+<h2>Cell size</h2>
+<select>
+  <option value="Small (eg. lymphocytes)">Small</option>
+  <option value="Medium (eg. epithelial)">Medium</option>
+  <option value="Large (eg. tumour epithelial)">Large</option>
+</select>
+
+<h2>Desired number of sequencing reads per cell</h2>
+<form>
+  Number of 96 well plates:<br>
+  <input type="text" name="Number of 96 well plates"><br>
+</form>
+
+
+<h2>Desired number of sequencing reads per cell</h2>
+<form>
+  Desired number of sequencing reads per cell:<br>
+  <input type="text" name="Desired number of sequencing reads per cell"><br>
+</form>
+
+<p>
+The maximum number of cells we can currently multiplex on a lane of Illumina sequencing is 384. To estimate the number of reads per cell divide the number of reads per lane.
+</p>
+
+
+<h2>Desired sequencing length</h2>
+
+<h2>Procedure</h2>
+<ul>
+  <li>Complete this sample submission form</li>
+  <li>Reverse transcription kit (SuperScript III First strand supermix) -> #11752-050</li>
+  <li>SYBR green mix</li>
+  <li>384 well plate for Lightcycler</li>
+  <li>A lightcycler 480 qPCR machine</li>
+  <li>96 well <b>(V-bottom)</b> for samples. (Automated setup)</li>
+  <li>A plating robot (Automated setup)</li>
+</ul>
+
+<h2 align="center">Sample sheet for reverse transcription</h2>
+		 <table border="1" cellpadding="10">
+			<tr>
+				<th>Sample</th>
+				<th>Name</th>
+				<th>Sample</th>
+				<th>Name</th>
+				<th>Sample</th>
+				<th>Name</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>No template control:     </td>
+				<td>5</td>
+				<td> <form><input type="text" name="isotype"> </form> </td>
+				<td>9</td>
+				<td> <form><input type="text" name="S9"> </form> </td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td> <form><input type="text" name="PI"> </form> </td>
+				<td>6</td>
+				<td> <form><input type="text" name="S6"> </form> </td>
+				<td>10</td>
+				<td> <form><input type="text" name="S10"> </form> </td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td><form><input type="text" name="CD44"> </form> </td>
+				<td>7</td>
+				<td> <form><input type="text" name="S7"> </form> </td>
+				<td>11</td>
+				<td> <form><input type="text" name="S11"> </form> </td>
+			</tr>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td> <form><input type="text" name="CD133"> </form> </td>
+				<td>8</td>
+				<td> <form><input type="text" name="S8"> </form> </td>
+				<td>12</td>
+				<td> <form><input type="text" name="S12"> </form> </td>
+			</tr>
+			</table>
+
+<h2>Reverse transcription</h2>
+
+<p>The choice of kit is largely arbitrary. A 1:1 mixture of random hexamer and poly-dT primer covers both mature mRNAs and precursor RNAs. Not all kits give the choice of primer combinations and a primer premix may be the only option. These primers generate a cDNA library.</br>.
+The amount of RNA you reverse transcribe into cDNA is dependent on the total amount available and the copy number of the target you wish to amplify. 
+1ug is the maximum amount of RNA to reserve transcribe as recommended by the kit. Therefore if the amount of RNA is not limited, 1ug is the recommended input to cDNA synthesis.
+5ng has been quoted as a reasonable amount of cDNA to amplify in a qRT-PCR reaction using a 384 well format. Therefore there will be 5ng cDNA in each 384 well.</br>
+For example a 1:10 dilution of 1000ng (1ug) of cDNA in a 20uL reaction volume will give 5ng/uL concentration. 1uL of this mixture become input for the qPCR reaction.
+If you reverse transcribe less input RNA, then reduce the dilution of the reverse transcription reaction to get 5ng/uL cDNA.</br>
+
+<h4>Reverse transcription calculator <small>N.B Dan stills needs to work on his javascript</small></h4>
+
+<
+<p>Calculate the total RNA you will use:</br>
+
+<form name="autoSumForm">
+<input class="right" type=text name="firstBox" value="" onFocus="startCalc();" onBlur="stopCalc();"><small> dilution factor</small>
+x <input class="right" type=text name="secondBox" value="" onFocus="startCalc();" onBlur="stopCalc();"><small> ng of RNA per 96 well reaction</small><br>
+= </br><input class="right" type=text name="thirdBox"> total RNA to perform reverse transcription
+</form></p>
+  
+Note quantification is performed on RNA not cDNA.</p>
+<h3>Setup of reverse transcription reaction</h3>
+
+<ol>
+  <li>Combine the following reagents on ice in 0.2mL PCR tubes</li>
+  <ul>
+    <li>2x RT reaction mix -> 10uL</li>
+    <li>RT Enzyme mix -> 2uL</li>
+    <li>Total RNA -> x uL</li>
+    <li>DEPC water (included in the kit) -> to 20uL</li>
+  </ul>
+  
+  <li>Make an extra reaction for a no template control <small>(make 10uL of it though to save money on reagents)</small></li>
+  <li>Optional pre-incubation*</li>
+  <li>Mix the contents of the tube and incubate at 50 C for 30 minutes in a thermocycler</li>
+  <li>Terminate the reaction at 85 C for 5 minutes and then chill on ice</li>
+  <li>Add 1&#956;L of RNase H <b><small>(careful not to contaminate your pipette or bench!)</b></small> incubate at 37 C for 30 minutes</bold></small></li>
+  <li>For storage at -20 C it is more convenient to transfer the contents of the 0.2mL tube into a 1.5mL tube as they fit in freezer boxes better. 0.2mL tubes will drop inside the slots and make tube retrieval difficult.</li>
+  <li>Store at -20 C and use at the pre-determined dilution in qPCR</li>
+</ol>
+<p>*<small>(optional) A pre-incubation of RNA and primers at 65 &#8226;C for 10 min enables more efficient priming due to removal of RNA secondary structure. Make sure you include a no template control.</br>
+ie: include all buffers but not the enzyme.</small></p>
+
+<!-- ################## QPCR SETUP ####################### -->
+
+
+
+  
+<h6 align="right">Written by Dan Brown 3 March 2017</h6>
+</body>  
+</html>  
