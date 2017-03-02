@@ -12,31 +12,39 @@
 </head>  
 <body>
 
-<h1 align="center">SMART-Seq Description</h1>
+<h1 align="center">SMART-Seq2 Description</h1>
 <p>
-SMART-Seq is a single-cell RNA-seq method that generates full transcript length information. It is currently the most widely published single-cell RNA-Seq method. Current limitations include restriction to polyadenylated mRNAs and lack of strand information. We have developed an automated pipeline that begins with 96 well plates containing single-cell lysates and ends with Illumina sequencing data.
+SMART-Seq2 is a single-cell RNA-seq method that generates full transcript length information. It is currently the most widely published single-cell RNA-Seq method. Current limitations include restriction to polyadenylated mRNAs and lack of strand information. We have developed an automated pipeline that begins with 96 well plates containing single-cell lysates and ends with Illumina sequencing data.
 </p>
 
 <h2>Workflow</h2>
+
 <p>
-Our automated workflow is optimised for 4x 96 well plates per run.
+Our automated workflow is optimised for 4x 96 well plates per run. Fewer plates are possible.
 </p>
+
 <ul>
   <li>Inputs are 96 well plates containing cell lysates</li>
+  
   <li>Optional stopping point amplified cDNA products</li>
+  
   <li>Optional stopping point pooled libraries ready for Illumina sequencing</li>
+  
   <li>Output is a fastq and bam file for each single-cell</li>
 </ul>
 
 <!-- ################## Important information for the customer ####################### -->
 
 <h2>Important information</h2>
+
 <p>
 Reliable single-cell FACS sorting is a critical parameter. Please consult your respective FACS core facility before optimizing single-cell sorting. The cell isolation should be as rapid as possible to preserve gene expression programs and viability. Tissue dissociation may require optimization.
 </p>
 
 <p>
 We are required to optimize the number of PCR cycles for amplification and concentration of ERCCs (synthetic mRNAs) to spike into the assay. These paramenters are influenced by the RNA content of your cell of interest which is proportional to cell size.
+
+Optimization requires a number of test plates. These can as little as 12 cells per well. We will amplify these samples and perform quality control to ensure processing of the real samples is as optimized as possible.
 </p>
 
 <p>
@@ -48,6 +56,7 @@ The maximum number of cells we can currently multiplex on a lane of Illumina seq
 </p>
 
 <h2>Controls</h2>
+
 <p>
 To assist with quality control experimentally in addition to  in the analysis proper controls are necessary. You are required to sort at least 1 multi-cell control (10 cells) and 1 empty well control.
 To minimize batch effects and improve data quaility it is beneficial to have mixed treatments on the same plate eg. half a plate with single-cells from wild-type and half a plate with single-cells from knockout.
@@ -58,6 +67,7 @@ To minimize batch effects and improve data quaility it is beneficial to have mix
 
 <ul>
   <li>Project name</li>
+  
   <li>Project description</li>
   
   <li>Cell size</li>
@@ -68,22 +78,37 @@ To minimize batch effects and improve data quaility it is beneficial to have mix
 </select>
   
   <li>Number of 96 well plates</li>
+  
   <li>Desired number of sequencing reads per cell:</li>
+  
   <li>Desired sequencing length</li>
 </ul>
 
 <!-- ################## Instructions ####################### -->
 
-<h2>Workflow</h2>
-<p>
-Our automated workflow is optimised for 4x 96 well plates per run.
-</p>
-<ul>
-  <li>Inputs are 96 well plates containing cell lysates</li>
-  <li>Optional stopping point amplified cDNA products</li>
-  <li>Optional stopping point pooled libraries ready for Illumina sequencing</li>
-  <li>Output is a fastq and bam file for each single-cell</li>
-</ul>
+<h2>Instructions</h2>
+
+<ol>
+  <li>Complete this sample submission form</li>
+  
+  <li>We will provide you consumables to collect samples including plates, lysis buffer and plate seals</li>
+  
+  <li>Upon receipt of the plates centrifuge briefly to collect liquid at the bottom of wells.</li>
+  
+  <li>During collection of cells by FACS keep on ice during sort then centrifuge again to collect cells at the bottom of the well.</li>
+  
+  <li>Snap freeze cells by placing in dry ice for several minutes then store in -80 freezer long-term. Ship cells to us on dry ice.</li>
+</ol>
+
+<h2>References</h2>
+
+<ol>
+<li>Picelli, S., Björklund, Å. K., Faridani, O. R., Sagasser, S., Winberg, G., & Sandberg, R. (2013). Smart-seq2 for sensitive full-length transcriptome profiling in single cells. Nature Methods, 10(11), 1096–1098.</li>
+
+  <li>Picelli, S., Faridani, O. R., Björklund, Å. K., Winberg, G., Sagasser, S., & Sandberg, R. (2014). Full-length RNA-seq from single cells using Smart-seq2. Nature Protocols, 9(1), 171–181.</li>
+  
+  <li>Points of significance: Analysis of variance and blocking. (2014). Points of significance: Analysis of variance and blocking., 11(7), 699–700.</li>
+</ol>
 
 <h6 align="right">Written by Dan Brown 3 March 2017</h6>
 </body>  
